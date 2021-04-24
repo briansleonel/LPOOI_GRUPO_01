@@ -18,8 +18,10 @@ namespace Vistas
 
         private void altaDeEdificiosToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            FrmAltaEdificio fEdificioAlta = new FrmAltaEdificio();
-            fEdificioAlta.Show();
+            this.Hide();
+            FrmAltaEdificio oAltaEdif = new FrmAltaEdificio();
+            oAltaEdif.Show();
+            this.Close();
         }
 
 
@@ -30,7 +32,7 @@ namespace Vistas
         /// <param name="e"></param>
         private void btnSalir_Click(object sender, EventArgs e)
         {
-            var resultado = MessageBox.Show("Está seguro de cerrar sesión", "Seleccione", MessageBoxButtons.YesNo);
+            var resultado = MessageBox.Show("Está seguro de cerrar sesión", "Seleccione", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (resultado == DialogResult.Yes)
             {
                 FrmMain.ActiveForm.Hide();
@@ -64,6 +66,10 @@ namespace Vistas
             FrmAltaEdificio oAltaEdif = new FrmAltaEdificio();
             oAltaEdif.Show();
             this.Close();
+        }
+
+        private void FrmMain_Load(object sender, EventArgs e) {
+
         }
     }
 }
