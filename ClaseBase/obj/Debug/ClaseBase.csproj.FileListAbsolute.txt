@@ -1,0 +1,15 @@
+C:\Users\Deluk\Documents\LPOO 2021\Ejercicios práctica\LPOO01_GRUPO_01\ClaseBase\bin\Debug\ClaseBase.dll
+C:\Users\Deluk\Documents\LPOO 2021\Ejercicios práctica\LPOO01_GRUPO_01\ClaseBase\bin\Debug\ClaseBase.pdb
+C:\Users\Deluk\Documents\LPOO 2021\Ejercicios práctica\LPOO01_GRUPO_01\ClaseBase\obj\Debug\ClaseBase.dll
+C:\Users\Deluk\Documents\LPOO 2021\Ejercicios práctica\LPOO01_GRUPO_01\ClaseBase\obj\Debug\ClaseBase.pdb
+C:\Users\Deluk\Documents\LPOO 2021\Ejercicios práctica\LPOO01_GRUPO_01\ClaseBase\obj\Debug\ClaseBase.csprojResolveAssemblyReference.cache
+C:\Users\Deluk\Documents\Unju\LPOO 2021\Ejercicios práctica\LPOO01_GRUPO_01\ClaseBase\bin\Debug\ClaseBase.dll
+C:\Users\Deluk\Documents\Unju\LPOO 2021\Ejercicios práctica\LPOO01_GRUPO_01\ClaseBase\bin\Debug\ClaseBase.pdb
+C:\Users\Deluk\Documents\Unju\LPOO 2021\Ejercicios práctica\LPOO01_GRUPO_01\ClaseBase\obj\Debug\ClaseBase.csprojResolveAssemblyReference.cache
+C:\Users\Deluk\Documents\Unju\LPOO 2021\Ejercicios práctica\LPOO01_GRUPO_01\ClaseBase\obj\Debug\ClaseBase.dll
+C:\Users\Deluk\Documents\Unju\LPOO 2021\Ejercicios práctica\LPOO01_GRUPO_01\ClaseBase\obj\Debug\ClaseBase.pdb
+C:\Users\gonza\OneDrive\Documentos\Visual Studio 2010\Projects\LPOO01_GRUPO_01\ClaseBase\bin\Debug\ClaseBase.dll
+C:\Users\gonza\OneDrive\Documentos\Visual Studio 2010\Projects\LPOO01_GRUPO_01\ClaseBase\bin\Debug\ClaseBase.pdb
+C:\Users\gonza\OneDrive\Documentos\Visual Studio 2010\Projects\LPOO01_GRUPO_01\ClaseBase\obj\Debug\ClaseBase.csprojResolveAssemblyReference.cache
+C:\Users\gonza\OneDrive\Documentos\Visual Studio 2010\Projects\LPOO01_GRUPO_01\ClaseBase\obj\Debug\ClaseBase.dll
+C:\Users\gonza\OneDrive\Documentos\Visual Studio 2010\Projects\LPOO01_GRUPO_01\ClaseBase\obj\Debug\ClaseBase.pdb
