@@ -39,3 +39,4 @@ C:\Users\gonza\OneDrive\Documentos\Visual Studio 2010\Projects\LPOO01_GRUPO_01\V
 C:\Users\gonza\OneDrive\Documentos\Visual Studio 2010\Projects\LPOO01_GRUPO_01\Vistas\obj\x86\Debug\Vistas.FrmMain.resources
 C:\Users\gonza\OneDrive\Documentos\Visual Studio 2010\Projects\LPOO01_GRUPO_01\Vistas\obj\x86\Debug\Vistas.Properties.Resources.resources
 C:\Users\gonza\OneDrive\Documentos\Visual Studio 2010\Projects\LPOO01_GRUPO_01\Vistas\obj\x86\Debug\Vistas.csproj.GenerateResource.Cache
+C:\Users\gonza\OneDrive\Documentos\Visual Studio 2010\Projects\LPOO01_GRUPO_01\Vistas\bin\Debug\Vistas.exe.config
