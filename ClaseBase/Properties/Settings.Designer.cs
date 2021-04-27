@@ -27,8 +27,8 @@ namespace ClaseBase.Properties {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
         [global::System.Configuration.DefaultSettingValueAttribute("Data Source=.\\SQLEXPRESS;AttachDbFilename=\"C:\\Users\\gonza\\OneDrive\\Documentos\\Vis" +
-            "ual Studio 2010\\Projects\\LPOO01_GRUPO_01\\agencia.mdf\";Integrated Security=True;C" +
-            "onnect Timeout=30;User Instance=True")]
+            "ual Studio 2010\\Projects\\LPOOI_GRUPO_01\\agencia.mdf\";Integrated Security=True;Co" +
+            "nnect Timeout=30;User Instance=True")]
         public string agenciaConnectionString {
             get {
                 return ((string)(this["agenciaConnectionString"]));
