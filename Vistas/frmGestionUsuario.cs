@@ -80,5 +80,15 @@ namespace Vistas {
         private void cargarUsuarios() {
             dgwUsuarios.DataSource = TrabajarUsuario.listarUsuarios();
         }
+
+        private void btnSearch_Click(object sender, EventArgs e) {
+            if (txtPatternSearch.Text != "")
+                dgwUsuarios.DataSource = TrabajarUsuario.buscarUsuarios(txtPatternSearch.Text);
+            else {
+                MessageBox.Show("Debe ingresar un patrón de búsqueda", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                cargarUsuarios();
+            }
+                
+        }
     }
 }

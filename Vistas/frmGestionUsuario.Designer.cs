@@ -26,6 +26,7 @@
             this.btnNuevoUsuario = new System.Windows.Forms.Button();
             this.dgwUsuarios = new System.Windows.Forms.DataGridView();
             this.pnlAddUser = new System.Windows.Forms.Panel();
+            this.label6 = new System.Windows.Forms.Label();
             this.btnSaveUser = new System.Windows.Forms.Button();
             this.cmbRol = new System.Windows.Forms.ComboBox();
             this.txtApellidoNombre = new System.Windows.Forms.TextBox();
@@ -37,14 +38,15 @@
             this.label2 = new System.Windows.Forms.Label();
             this.txtUsername = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
+            this.btnSearch = new System.Windows.Forms.Button();
+            this.txtPatternSearch = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgwUsuarios)).BeginInit();
             this.pnlAddUser.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnNuevoUsuario
             // 
-            this.btnNuevoUsuario.Location = new System.Drawing.Point(432, 22);
+            this.btnNuevoUsuario.Location = new System.Drawing.Point(675, 28);
             this.btnNuevoUsuario.Name = "btnNuevoUsuario";
             this.btnNuevoUsuario.Size = new System.Drawing.Size(75, 23);
             this.btnNuevoUsuario.TabIndex = 0;
@@ -81,6 +83,16 @@
             this.pnlAddUser.Name = "pnlAddUser";
             this.pnlAddUser.Size = new System.Drawing.Size(350, 400);
             this.pnlAddUser.TabIndex = 2;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(92, 25);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(167, 25);
+            this.label6.TabIndex = 29;
+            this.label6.Text = "Nuevo Usuario";
             // 
             // btnSaveUser
             // 
@@ -177,21 +189,33 @@
             this.label1.Text = "Nombre Usuario";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // label6
+            // btnSearch
             // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(92, 25);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(167, 25);
-            this.label6.TabIndex = 29;
-            this.label6.Text = "Nuevo Usuario";
+            this.btnSearch.Location = new System.Drawing.Point(453, 53);
+            this.btnSearch.Margin = new System.Windows.Forms.Padding(6);
+            this.btnSearch.Name = "btnSearch";
+            this.btnSearch.Size = new System.Drawing.Size(150, 26);
+            this.btnSearch.TabIndex = 3;
+            this.btnSearch.Text = "BUSCAR";
+            this.btnSearch.UseVisualStyleBackColor = true;
+            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
+            // 
+            // txtPatternSearch
+            // 
+            this.txtPatternSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPatternSearch.Location = new System.Drawing.Point(15, 55);
+            this.txtPatternSearch.Margin = new System.Windows.Forms.Padding(6);
+            this.txtPatternSearch.Name = "txtPatternSearch";
+            this.txtPatternSearch.Size = new System.Drawing.Size(420, 24);
+            this.txtPatternSearch.TabIndex = 4;
             // 
             // frmGestionUsuario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(984, 561);
+            this.Controls.Add(this.txtPatternSearch);
+            this.Controls.Add(this.btnSearch);
             this.Controls.Add(this.pnlAddUser);
             this.Controls.Add(this.dgwUsuarios);
             this.Controls.Add(this.btnNuevoUsuario);
@@ -202,6 +226,7 @@
             this.pnlAddUser.ResumeLayout(false);
             this.pnlAddUser.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -222,5 +247,7 @@
         private System.Windows.Forms.TextBox txtUsername;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Button btnSearch;
+        private System.Windows.Forms.TextBox txtPatternSearch;
     }
 }
