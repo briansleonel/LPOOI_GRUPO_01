@@ -29,12 +29,12 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.txtPassword = new System.Windows.Forms.TextBox();
+            this.txtRepeatPassword = new System.Windows.Forms.TextBox();
+            this.txtApellidoNombre = new System.Windows.Forms.TextBox();
             this.cmbRol = new System.Windows.Forms.ComboBox();
             this.btnCancelar = new System.Windows.Forms.Button();
-            this.btnGuardar = new System.Windows.Forms.Button();
+            this.btnSaveUser = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
@@ -92,26 +92,28 @@
             this.label5.TabIndex = 14;
             this.label5.Text = "Rol";
             // 
-            // textBox1
+            // txtPassword
             // 
-            this.textBox1.Location = new System.Drawing.Point(185, 153);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(130, 20);
-            this.textBox1.TabIndex = 1;
+            this.txtPassword.Location = new System.Drawing.Point(185, 153);
+            this.txtPassword.Name = "txtPassword";
+            this.txtPassword.Size = new System.Drawing.Size(130, 20);
+            this.txtPassword.TabIndex = 1;
+            this.txtPassword.UseSystemPasswordChar = true;
             // 
-            // textBox2
+            // txtRepeatPassword
             // 
-            this.textBox2.Location = new System.Drawing.Point(185, 197);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(130, 20);
-            this.textBox2.TabIndex = 2;
+            this.txtRepeatPassword.Location = new System.Drawing.Point(185, 197);
+            this.txtRepeatPassword.Name = "txtRepeatPassword";
+            this.txtRepeatPassword.Size = new System.Drawing.Size(130, 20);
+            this.txtRepeatPassword.TabIndex = 2;
+            this.txtRepeatPassword.UseSystemPasswordChar = true;
             // 
-            // textBox3
+            // txtApellidoNombre
             // 
-            this.textBox3.Location = new System.Drawing.Point(185, 241);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(130, 20);
-            this.textBox3.TabIndex = 3;
+            this.txtApellidoNombre.Location = new System.Drawing.Point(185, 241);
+            this.txtApellidoNombre.Name = "txtApellidoNombre";
+            this.txtApellidoNombre.Size = new System.Drawing.Size(130, 20);
+            this.txtApellidoNombre.TabIndex = 3;
             // 
             // cmbRol
             // 
@@ -129,15 +131,17 @@
             this.btnCancelar.TabIndex = 15;
             this.btnCancelar.Text = "CANCELAR";
             this.btnCancelar.UseVisualStyleBackColor = true;
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
-            // btnGuardar
+            // btnSaveUser
             // 
-            this.btnGuardar.Location = new System.Drawing.Point(212, 354);
-            this.btnGuardar.Name = "btnGuardar";
-            this.btnGuardar.Size = new System.Drawing.Size(120, 30);
-            this.btnGuardar.TabIndex = 16;
-            this.btnGuardar.Text = "GUARDAR";
-            this.btnGuardar.UseVisualStyleBackColor = true;
+            this.btnSaveUser.Location = new System.Drawing.Point(212, 354);
+            this.btnSaveUser.Name = "btnSaveUser";
+            this.btnSaveUser.Size = new System.Drawing.Size(120, 30);
+            this.btnSaveUser.TabIndex = 16;
+            this.btnSaveUser.Text = "GUARDAR";
+            this.btnSaveUser.UseVisualStyleBackColor = true;
+            this.btnSaveUser.Click += new System.EventHandler(this.btnSaveUser_Click);
             // 
             // label6
             // 
@@ -155,12 +159,12 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(384, 411);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.btnGuardar);
+            this.Controls.Add(this.btnSaveUser);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.cmbRol);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtApellidoNombre);
+            this.Controls.Add(this.txtRepeatPassword);
+            this.Controls.Add(this.txtPassword);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
@@ -183,12 +187,12 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox txtPassword;
+        private System.Windows.Forms.TextBox txtRepeatPassword;
+        private System.Windows.Forms.TextBox txtApellidoNombre;
         private System.Windows.Forms.ComboBox cmbRol;
         private System.Windows.Forms.Button btnCancelar;
-        private System.Windows.Forms.Button btnGuardar;
+        private System.Windows.Forms.Button btnSaveUser;
         private System.Windows.Forms.Label label6;
     }
 }

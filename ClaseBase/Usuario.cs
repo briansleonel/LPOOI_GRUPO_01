@@ -59,5 +59,9 @@ namespace ClaseBase
             Usu_ApellidoNombre = apellidoNombre;
             Rol_Codigo = rol;
         }
+
+        public Usuario() {
+            // TODO: Complete member initialization
+        }
     }
 }
