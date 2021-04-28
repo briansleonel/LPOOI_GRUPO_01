@@ -59,7 +59,6 @@ namespace Vistas {
 
                     MessageBox.Show("Usuario Agregado con éxito", "");
                     cleanTextBox();
-                    this.Close();
                 } else
                     MessageBox.Show("Las contraseñas no coinciden", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
