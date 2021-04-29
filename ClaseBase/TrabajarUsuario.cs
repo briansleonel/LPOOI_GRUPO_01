@@ -108,5 +108,28 @@ namespace ClaseBase {
 
             return dt;
         }
+
+        public static void updateUsuario(Usuario user) { 
+            SqlConnection conexion = new SqlConnection(ClaseBase.Properties.Settings.Default.agenciaConnectionString);
+
+            SqlCommand cmd = new SqlCommand();
+            cmd.CommandText = "UPDATE Usuario ";
+            cmd.CommandText += " SET usu_nombreUsuario = @username,  usu_password = @password,";
+            cmd.CommandText += " usu_apellidoNombre = @apellidoNombre, rol_codigo = @rol ";
+            cmd.CommandText += " WHERE usu_id = @id ";
+
+            cmd.CommandType = CommandType.Text;
+            cmd.Connection = conexion;
+
+            cmd.Parameters.AddWithValue("@username", user.Usu_NombreUsuario);
+            cmd.Parameters.AddWithValue("@password", user.Usu_Contraseña);
+            cmd.Parameters.AddWithValue("@apellidoNombre", user.Usu_ApellidoNombre);
+            cmd.Parameters.AddWithValue("@rol", user.Rol_Codigo);
+            cmd.Parameters.AddWithValue("@id", user.Usu_ID);
+
+            conexion.Open();
+            cmd.ExecuteNonQuery();
+            conexion.Close();
+        }
     }
 }
