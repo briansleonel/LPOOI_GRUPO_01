@@ -24,7 +24,9 @@ namespace Vistas
             this.Close();
         }
 
-
+        /*
+         * PRUEBA PARA VER SI FUNCIONA LO DEL BRANCH
+        */
         /// <summary>
         /// Salir del programa y volver al inicio de sesión
         /// </summary>
