@@ -29,7 +29,9 @@
             this.tabControl = new System.Windows.Forms.TabControl();
             this.tabMain = new System.Windows.Forms.TabPage();
             this.tabNewUser = new System.Windows.Forms.TabPage();
+            this.btnAddCancel = new System.Windows.Forms.Button();
             this.label17 = new System.Windows.Forms.Label();
+            this.btnAddSaveUser = new System.Windows.Forms.Button();
             this.txtAddUsername = new System.Windows.Forms.TextBox();
             this.cmbAddRol = new System.Windows.Forms.ComboBox();
             this.label11 = new System.Windows.Forms.Label();
@@ -41,6 +43,8 @@
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.tabModificar = new System.Windows.Forms.TabPage();
+            this.btnModCancel = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
             this.txtModId = new System.Windows.Forms.TextBox();
             this.label18 = new System.Windows.Forms.Label();
             this.btnModSave = new System.Windows.Forms.Button();
@@ -54,11 +58,8 @@
             this.label15 = new System.Windows.Forms.Label();
             this.txtModUsername = new System.Windows.Forms.TextBox();
             this.label16 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.btnModDelete = new System.Windows.Forms.Button();
-            this.btnAddSaveUser = new System.Windows.Forms.Button();
-            this.btnAddCancel = new System.Windows.Forms.Button();
             this.tabDelete = new System.Windows.Forms.TabPage();
+            this.btnDelCancel = new System.Windows.Forms.Button();
             this.btnDeleteUser = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.txtDelId = new System.Windows.Forms.TextBox();
@@ -69,7 +70,8 @@
             this.label5 = new System.Windows.Forms.Label();
             this.txtDelUsername = new System.Windows.Forms.TextBox();
             this.label20 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
+            this.label6 = new System.Windows.Forms.Label();
+            this.btnVolverAtras = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgwUsuarios)).BeginInit();
             this.tabControl.SuspendLayout();
             this.tabNewUser.SuspendLayout();
@@ -80,7 +82,7 @@
             // dgwUsuarios
             // 
             this.dgwUsuarios.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgwUsuarios.Location = new System.Drawing.Point(15, 96);
+            this.dgwUsuarios.Location = new System.Drawing.Point(15, 196);
             this.dgwUsuarios.Margin = new System.Windows.Forms.Padding(6);
             this.dgwUsuarios.Name = "dgwUsuarios";
             this.dgwUsuarios.Size = new System.Drawing.Size(588, 450);
@@ -89,10 +91,11 @@
             // 
             // btnSearch
             // 
-            this.btnSearch.Location = new System.Drawing.Point(453, 53);
+            this.btnSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSearch.Location = new System.Drawing.Point(453, 145);
             this.btnSearch.Margin = new System.Windows.Forms.Padding(6);
             this.btnSearch.Name = "btnSearch";
-            this.btnSearch.Size = new System.Drawing.Size(150, 26);
+            this.btnSearch.Size = new System.Drawing.Size(150, 29);
             this.btnSearch.TabIndex = 3;
             this.btnSearch.Text = "BUSCAR";
             this.btnSearch.UseVisualStyleBackColor = true;
@@ -100,11 +103,11 @@
             // 
             // txtPatternSearch
             // 
-            this.txtPatternSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPatternSearch.Location = new System.Drawing.Point(15, 55);
+            this.txtPatternSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPatternSearch.Location = new System.Drawing.Point(15, 145);
             this.txtPatternSearch.Margin = new System.Windows.Forms.Padding(6);
             this.txtPatternSearch.Name = "txtPatternSearch";
-            this.txtPatternSearch.Size = new System.Drawing.Size(420, 24);
+            this.txtPatternSearch.Size = new System.Drawing.Size(420, 29);
             this.txtPatternSearch.TabIndex = 4;
             // 
             // tabControl
@@ -113,7 +116,7 @@
             this.tabControl.Controls.Add(this.tabNewUser);
             this.tabControl.Controls.Add(this.tabModificar);
             this.tabControl.Controls.Add(this.tabDelete);
-            this.tabControl.Location = new System.Drawing.Point(619, 96);
+            this.tabControl.Location = new System.Drawing.Point(619, 196);
             this.tabControl.Margin = new System.Windows.Forms.Padding(6);
             this.tabControl.Name = "tabControl";
             this.tabControl.SelectedIndex = 0;
@@ -153,6 +156,16 @@
             this.tabNewUser.Text = "Nuevo";
             this.tabNewUser.UseVisualStyleBackColor = true;
             // 
+            // btnAddCancel
+            // 
+            this.btnAddCancel.Location = new System.Drawing.Point(43, 367);
+            this.btnAddCancel.Name = "btnAddCancel";
+            this.btnAddCancel.Size = new System.Drawing.Size(120, 30);
+            this.btnAddCancel.TabIndex = 41;
+            this.btnAddCancel.Text = "CANCELAR";
+            this.btnAddCancel.UseVisualStyleBackColor = true;
+            this.btnAddCancel.Click += new System.EventHandler(this.btnAddCancel_Click);
+            // 
             // label17
             // 
             this.label17.AutoSize = true;
@@ -162,6 +175,16 @@
             this.label17.Size = new System.Drawing.Size(167, 25);
             this.label17.TabIndex = 30;
             this.label17.Text = "Nuevo Usuario";
+            // 
+            // btnAddSaveUser
+            // 
+            this.btnAddSaveUser.Location = new System.Drawing.Point(179, 367);
+            this.btnAddSaveUser.Name = "btnAddSaveUser";
+            this.btnAddSaveUser.Size = new System.Drawing.Size(120, 30);
+            this.btnAddSaveUser.TabIndex = 40;
+            this.btnAddSaveUser.Text = "GUARDAR";
+            this.btnAddSaveUser.UseVisualStyleBackColor = true;
+            this.btnAddSaveUser.Click += new System.EventHandler(this.btnAddSaveUser_Click);
             // 
             // txtAddUsername
             // 
@@ -250,7 +273,7 @@
             // 
             // tabModificar
             // 
-            this.tabModificar.Controls.Add(this.btnModDelete);
+            this.tabModificar.Controls.Add(this.btnModCancel);
             this.tabModificar.Controls.Add(this.label1);
             this.tabModificar.Controls.Add(this.txtModId);
             this.tabModificar.Controls.Add(this.label18);
@@ -272,6 +295,25 @@
             this.tabModificar.TabIndex = 2;
             this.tabModificar.Text = "Modificar";
             this.tabModificar.UseVisualStyleBackColor = true;
+            // 
+            // btnModCancel
+            // 
+            this.btnModCancel.Location = new System.Drawing.Point(27, 374);
+            this.btnModCancel.Name = "btnModCancel";
+            this.btnModCancel.Size = new System.Drawing.Size(140, 30);
+            this.btnModCancel.TabIndex = 42;
+            this.btnModCancel.Text = "CANCELAR";
+            this.btnModCancel.UseVisualStyleBackColor = true;
+            this.btnModCancel.Click += new System.EventHandler(this.btnModCancel_Click);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(138, 94);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(18, 13);
+            this.label1.TabIndex = 41;
+            this.label1.Text = "ID";
             // 
             // txtModId
             // 
@@ -386,48 +428,9 @@
             this.label16.Text = "Nombre Usuario";
             this.label16.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(138, 94);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(18, 13);
-            this.label1.TabIndex = 41;
-            this.label1.Text = "ID";
-            // 
-            // btnModDelete
-            // 
-            this.btnModDelete.Location = new System.Drawing.Point(27, 374);
-            this.btnModDelete.Name = "btnModDelete";
-            this.btnModDelete.Size = new System.Drawing.Size(140, 30);
-            this.btnModDelete.TabIndex = 42;
-            this.btnModDelete.Text = "CANCELAR";
-            this.btnModDelete.UseVisualStyleBackColor = true;
-            this.btnModDelete.Click += new System.EventHandler(this.btnModDelete_Click);
-            // 
-            // btnAddSaveUser
-            // 
-            this.btnAddSaveUser.Location = new System.Drawing.Point(179, 367);
-            this.btnAddSaveUser.Name = "btnAddSaveUser";
-            this.btnAddSaveUser.Size = new System.Drawing.Size(120, 30);
-            this.btnAddSaveUser.TabIndex = 40;
-            this.btnAddSaveUser.Text = "GUARDAR";
-            this.btnAddSaveUser.UseVisualStyleBackColor = true;
-            this.btnAddSaveUser.Click += new System.EventHandler(this.btnAddSaveUser_Click);
-            // 
-            // btnAddCancel
-            // 
-            this.btnAddCancel.Location = new System.Drawing.Point(43, 367);
-            this.btnAddCancel.Name = "btnAddCancel";
-            this.btnAddCancel.Size = new System.Drawing.Size(120, 30);
-            this.btnAddCancel.TabIndex = 41;
-            this.btnAddCancel.Text = "CANCELAR";
-            this.btnAddCancel.UseVisualStyleBackColor = true;
-            this.btnAddCancel.Click += new System.EventHandler(this.btnAddCancel_Click);
-            // 
             // tabDelete
             // 
-            this.tabDelete.Controls.Add(this.button1);
+            this.tabDelete.Controls.Add(this.btnDelCancel);
             this.tabDelete.Controls.Add(this.btnDeleteUser);
             this.tabDelete.Controls.Add(this.label2);
             this.tabDelete.Controls.Add(this.txtDelId);
@@ -445,6 +448,16 @@
             this.tabDelete.TabIndex = 3;
             this.tabDelete.Text = "Eliminar";
             this.tabDelete.UseVisualStyleBackColor = true;
+            // 
+            // btnDelCancel
+            // 
+            this.btnDelCancel.Location = new System.Drawing.Point(43, 368);
+            this.btnDelCancel.Name = "btnDelCancel";
+            this.btnDelCancel.Size = new System.Drawing.Size(120, 30);
+            this.btnDelCancel.TabIndex = 58;
+            this.btnDelCancel.Text = "CANCELAR";
+            this.btnDelCancel.UseVisualStyleBackColor = true;
+            this.btnDelCancel.Click += new System.EventHandler(this.btnDelCancel_Click);
             // 
             // btnDeleteUser
             // 
@@ -534,20 +547,36 @@
             this.label20.Text = "Nombre Usuario";
             this.label20.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // button1
+            // label6
             // 
-            this.button1.Location = new System.Drawing.Point(43, 368);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(120, 30);
-            this.button1.TabIndex = 58;
-            this.button1.Text = "CANCELAR";
-            this.button1.UseVisualStyleBackColor = true;
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Verdana", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(297, 31);
+            this.label6.Margin = new System.Windows.Forms.Padding(10);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(390, 42);
+            this.label6.TabIndex = 6;
+            this.label6.Text = "Gestionar Usuarios";
+            // 
+            // btnVolverAtras
+            // 
+            this.btnVolverAtras.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(57)))), ((int)(((byte)(70)))));
+            this.btnVolverAtras.ForeColor = System.Drawing.Color.White;
+            this.btnVolverAtras.Location = new System.Drawing.Point(815, 145);
+            this.btnVolverAtras.Name = "btnVolverAtras";
+            this.btnVolverAtras.Size = new System.Drawing.Size(150, 29);
+            this.btnVolverAtras.TabIndex = 7;
+            this.btnVolverAtras.Text = "VOLVER ATRÁS";
+            this.btnVolverAtras.UseVisualStyleBackColor = false;
+            this.btnVolverAtras.Click += new System.EventHandler(this.btnVolverAtras_Click);
             // 
             // frmGestionUsuario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(984, 561);
+            this.ClientSize = new System.Drawing.Size(984, 661);
+            this.Controls.Add(this.btnVolverAtras);
+            this.Controls.Add(this.label6);
             this.Controls.Add(this.tabControl);
             this.Controls.Add(this.txtPatternSearch);
             this.Controls.Add(this.btnSearch);
@@ -603,10 +632,10 @@
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.TextBox txtModId;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button btnModDelete;
+        private System.Windows.Forms.Button btnModCancel;
         private System.Windows.Forms.Button btnAddCancel;
         private System.Windows.Forms.TabPage tabDelete;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnDelCancel;
         private System.Windows.Forms.Button btnDeleteUser;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txtDelId;
@@ -617,5 +646,7 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox txtDelUsername;
         private System.Windows.Forms.Label label20;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Button btnVolverAtras;
     }
 }

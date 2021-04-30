@@ -38,10 +38,7 @@
             this.btnSalir = new System.Windows.Forms.Button();
             this.tbclMenuPrincipal = new System.Windows.Forms.TabControl();
             this.tbUsuario = new System.Windows.Forms.TabPage();
-            this.btnBajaUsuario = new System.Windows.Forms.Button();
-            this.btnBuscarUsuario = new System.Windows.Forms.Button();
-            this.btnModUsuario = new System.Windows.Forms.Button();
-            this.btnAltaUsuario = new System.Windows.Forms.Button();
+            this.btnGestionarUsuarios = new System.Windows.Forms.Button();
             this.tbInquilino = new System.Windows.Forms.TabPage();
             this.btnBajaInquilino = new System.Windows.Forms.Button();
             this.btnBuscarInquilino = new System.Windows.Forms.Button();
@@ -149,10 +146,7 @@
             // 
             // tbUsuario
             // 
-            this.tbUsuario.Controls.Add(this.btnBajaUsuario);
-            this.tbUsuario.Controls.Add(this.btnBuscarUsuario);
-            this.tbUsuario.Controls.Add(this.btnModUsuario);
-            this.tbUsuario.Controls.Add(this.btnAltaUsuario);
+            this.tbUsuario.Controls.Add(this.btnGestionarUsuarios);
             this.tbUsuario.Location = new System.Drawing.Point(4, 22);
             this.tbUsuario.Name = "tbUsuario";
             this.tbUsuario.Padding = new System.Windows.Forms.Padding(3);
@@ -161,41 +155,15 @@
             this.tbUsuario.Text = "Usuario";
             this.tbUsuario.UseVisualStyleBackColor = true;
             // 
-            // btnBajaUsuario
+            // btnGestionarUsuarios
             // 
-            this.btnBajaUsuario.Location = new System.Drawing.Point(277, 120);
-            this.btnBajaUsuario.Name = "btnBajaUsuario";
-            this.btnBajaUsuario.Size = new System.Drawing.Size(175, 57);
-            this.btnBajaUsuario.TabIndex = 6;
-            this.btnBajaUsuario.Text = "Eliminar un Usuario";
-            this.btnBajaUsuario.UseVisualStyleBackColor = true;
-            // 
-            // btnBuscarUsuario
-            // 
-            this.btnBuscarUsuario.Location = new System.Drawing.Point(70, 120);
-            this.btnBuscarUsuario.Name = "btnBuscarUsuario";
-            this.btnBuscarUsuario.Size = new System.Drawing.Size(175, 57);
-            this.btnBuscarUsuario.TabIndex = 5;
-            this.btnBuscarUsuario.Text = "Buscar un Usuario";
-            this.btnBuscarUsuario.UseVisualStyleBackColor = true;
-            // 
-            // btnModUsuario
-            // 
-            this.btnModUsuario.Location = new System.Drawing.Point(277, 31);
-            this.btnModUsuario.Name = "btnModUsuario";
-            this.btnModUsuario.Size = new System.Drawing.Size(175, 57);
-            this.btnModUsuario.TabIndex = 4;
-            this.btnModUsuario.Text = "Modificar un Usuario";
-            this.btnModUsuario.UseVisualStyleBackColor = true;
-            // 
-            // btnAltaUsuario
-            // 
-            this.btnAltaUsuario.Location = new System.Drawing.Point(70, 31);
-            this.btnAltaUsuario.Name = "btnAltaUsuario";
-            this.btnAltaUsuario.Size = new System.Drawing.Size(175, 57);
-            this.btnAltaUsuario.TabIndex = 3;
-            this.btnAltaUsuario.Text = "Registrar Usuario";
-            this.btnAltaUsuario.UseVisualStyleBackColor = true;
+            this.btnGestionarUsuarios.Location = new System.Drawing.Point(177, 73);
+            this.btnGestionarUsuarios.Name = "btnGestionarUsuarios";
+            this.btnGestionarUsuarios.Size = new System.Drawing.Size(175, 57);
+            this.btnGestionarUsuarios.TabIndex = 3;
+            this.btnGestionarUsuarios.Text = "Gestionar Usuarios";
+            this.btnGestionarUsuarios.UseVisualStyleBackColor = true;
+            this.btnGestionarUsuarios.Click += new System.EventHandler(this.btnGestionarUsuarios_Click);
             // 
             // tbInquilino
             // 
@@ -438,10 +406,6 @@
         private System.Windows.Forms.TabControl tbclMenuPrincipal;
         private System.Windows.Forms.TabPage tbUsuario;
         private System.Windows.Forms.TabPage tbInquilino;
-        private System.Windows.Forms.Button btnBajaUsuario;
-        private System.Windows.Forms.Button btnBuscarUsuario;
-        private System.Windows.Forms.Button btnModUsuario;
-        private System.Windows.Forms.Button btnAltaUsuario;
         private System.Windows.Forms.TabPage tbDepartamento;
         private System.Windows.Forms.TabPage tbEdificio;
         private System.Windows.Forms.TabPage tbAlquiler;
@@ -461,5 +425,6 @@
         private System.Windows.Forms.Button btnBuscarAlquiler;
         private System.Windows.Forms.Button btnModAlquiler;
         private System.Windows.Forms.Button btnAltaAlquiler;
+        private System.Windows.Forms.Button btnGestionarUsuarios;
     }
 }

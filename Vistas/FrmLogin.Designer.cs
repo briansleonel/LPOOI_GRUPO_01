@@ -54,7 +54,7 @@
             // 
             this.lblContrasenia.AutoSize = true;
             this.lblContrasenia.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblContrasenia.Image = global::Vistas.Properties.Resources.ImgPwd;
+            
             this.lblContrasenia.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.lblContrasenia.Location = new System.Drawing.Point(55, 183);
             this.lblContrasenia.Name = "lblContrasenia";

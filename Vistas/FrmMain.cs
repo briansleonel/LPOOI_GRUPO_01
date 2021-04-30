@@ -71,5 +71,10 @@ namespace Vistas
         private void FrmMain_Load(object sender, EventArgs e) {
 
         }
+
+        private void btnGestionarUsuarios_Click(object sender, EventArgs e) {
+            frmGestionUsuario a = new frmGestionUsuario();
+            a.Show();
+        }
     }
 }

@@ -118,14 +118,6 @@ namespace Vistas {
             }
         }
 
-        private void btnAddCancel_Click(object sender, EventArgs e) {
-            cleanTextBox(tabNewUser);
-        }
-
-        private void btnModDelete_Click(object sender, EventArgs e) {
-            
-        }
-
         private void btnDeleteUser_Click(object sender, EventArgs e) {
             DialogResult rta = MessageBox.Show("¿Eliminar usuario?\n ID: " + txtDelId.Text, "", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
             if (rta == DialogResult.Yes) {
@@ -137,6 +129,25 @@ namespace Vistas {
                 cleanTextBox(tabModificar);
                 cargarUsuarios();
             }
+        }
+
+        /*
+         *  ------------------- BOTONES CANCEL ---------------------
+         */
+
+        private void btnAddCancel_Click(object sender, EventArgs e) {
+            cleanTextBox(tabNewUser);
+            tabControl.SelectedTab = tabControl.TabPages["tabMain"];
+        }
+
+        private void btnDelCancel_Click(object sender, EventArgs e) {
+            cleanTextBox(tabDelete);
+            tabControl.SelectedTab = tabControl.TabPages["tabMain"];
+        }
+
+        private void btnModCancel_Click(object sender, EventArgs e) {
+            cleanTextBox(tabModificar);
+            tabControl.SelectedTab = tabControl.TabPages["tabMain"];
         }
 
         /*
@@ -184,6 +195,10 @@ namespace Vistas {
                     textBox.Text = string.Empty;
                 }
             }
+        }
+
+        private void btnVolverAtras_Click(object sender, EventArgs e) {
+            this.Close();
         }
     }
 }

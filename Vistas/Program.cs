@@ -17,12 +17,12 @@ namespace Vistas
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
 
-            //FrmLogin oFrmLogin = new FrmLogin();
-            //oFrmLogin.Show();
-            //oFrmLogin.FormClosed += MainForm_Closed;
+            FrmLogin oFrmLogin = new FrmLogin();
+            oFrmLogin.Show();
+            oFrmLogin.FormClosed += MainForm_Closed;
 
-            frmGestionUsuario a = new frmGestionUsuario();
-            a.Show();
+            //frmGestionUsuario a = new frmGestionUsuario();
+            //a.Show();
 
             Application.Run();
         }

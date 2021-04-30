@@ -73,6 +73,16 @@ namespace Vistas.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap ImgPwd1 {
+            get {
+                object obj = ResourceManager.GetObject("ImgPwd1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap ImgUser {
             get {
                 object obj = ResourceManager.GetObject("ImgUser", resourceCulture);
