@@ -131,5 +131,23 @@ namespace ClaseBase {
             cmd.ExecuteNonQuery();
             conexion.Close();
         }
+
+        public static void deleteUsuarioByID(int id) {
+            SqlConnection conexion = new SqlConnection(ClaseBase.Properties.Settings.Default.agenciaConnectionString);
+
+            SqlCommand cmd = new SqlCommand();
+            cmd.CommandText = "DELETE FROM Usuario ";
+            cmd.CommandText += " WHERE usu_id = @id";
+
+            cmd.CommandType = CommandType.Text;
+            cmd.Connection = conexion;
+
+            cmd.Parameters.AddWithValue("@id", id);
+
+            conexion.Open();
+            cmd.ExecuteNonQuery();
+            conexion.Close();
+
+        }
     }
 }

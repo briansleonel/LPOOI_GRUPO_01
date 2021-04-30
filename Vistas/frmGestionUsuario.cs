@@ -58,6 +58,12 @@ namespace Vistas {
                 txtModUsername.Text = dgwUsuarios.CurrentRow.Cells["Username"].Value.ToString();
                 txtModPasswrod.Text = dgwUsuarios.CurrentRow.Cells["Contraseña"].Value.ToString();
                 txtModFullname.Text = dgwUsuarios.CurrentRow.Cells["Apellido y nombre"].Value.ToString();
+
+                //Panel delete
+                cmbDelRol.SelectedValue = dgwUsuarios.CurrentRow.Cells["ID Rol"].Value.ToString();
+                txtDelId.Text = dgwUsuarios.CurrentRow.Cells["ID"].Value.ToString();
+                txtDelUsername.Text = dgwUsuarios.CurrentRow.Cells["Username"].Value.ToString();
+                txtDelFullname.Text = dgwUsuarios.CurrentRow.Cells["Apellido y nombre"].Value.ToString();
             }
         }
 
@@ -68,18 +74,21 @@ namespace Vistas {
         private void btnAddSaveUser_Click(object sender, EventArgs e) {
             if (validarTextBoxAddUser()) {
                 if (txtAddPassword.Text == txtAddRepeatPassword.Text) {
-                    Usuario oUser = new Usuario();
+                    DialogResult rta = MessageBox.Show("¿Desea agregar el usuario?", "", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                    if (rta == DialogResult.Yes) {
+                        Usuario oUser = new Usuario();
 
-                    oUser.Usu_NombreUsuario = txtAddUsername.Text;
-                    oUser.Usu_Contraseña = txtAddPassword.Text;
-                    oUser.Usu_ApellidoNombre = txtAddFullname.Text;
-                    oUser.Rol_Codigo = Convert.ToInt32(cmbAddRol.SelectedValue);
+                        oUser.Usu_NombreUsuario = txtAddUsername.Text;
+                        oUser.Usu_Contraseña = txtAddPassword.Text;
+                        oUser.Usu_ApellidoNombre = txtAddFullname.Text;
+                        oUser.Rol_Codigo = Convert.ToInt32(cmbAddRol.SelectedValue);
 
-                    TrabajarUsuario.addUsuario(oUser);
+                        TrabajarUsuario.addUsuario(oUser);
 
-                    MessageBox.Show("Usuario Agregado con éxito", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    cleanTextBox(tabNewUser);
-                    cargarUsuarios();
+                        MessageBox.Show("Usuario Agregado con éxito", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        cleanTextBox(tabNewUser);
+                        cargarUsuarios();
+                    }
                 } else
                     MessageBox.Show("Las contraseñas no coinciden", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
@@ -100,12 +109,33 @@ namespace Vistas {
 
                         TrabajarUsuario.updateUsuario(oUser);
 
-                        MessageBox.Show("Usuario modificado", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        MessageBox.Show("Se actualizaron los datos del usuario ID: " + oUser.Usu_ID, "", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         cleanTextBox(tabModificar);
                         cargarUsuarios();
                     }
                 } else
                     MessageBox.Show("Las contraseñas no coinciden", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void btnAddCancel_Click(object sender, EventArgs e) {
+            cleanTextBox(tabNewUser);
+        }
+
+        private void btnModDelete_Click(object sender, EventArgs e) {
+            
+        }
+
+        private void btnDeleteUser_Click(object sender, EventArgs e) {
+            DialogResult rta = MessageBox.Show("¿Eliminar usuario?\n ID: " + txtDelId.Text, "", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+            if (rta == DialogResult.Yes) {
+
+                //TrabajarUsuario.deleteUsuarioByID(Convert.ToInt32(txtModId.Text));
+                TrabajarUsuario.deleteUsuarioByID(Convert.ToInt32(txtDelId.Text));
+
+                MessageBox.Show("El usuario fué eliminado", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                cleanTextBox(tabModificar);
+                cargarUsuarios();
             }
         }
 
@@ -155,6 +185,5 @@ namespace Vistas {
                 }
             }
         }
-
     }
 }

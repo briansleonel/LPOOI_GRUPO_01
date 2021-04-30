@@ -23,7 +23,6 @@
         /// the contents of this method with the code editor.
         /// </summary>
         private void InitializeComponent() {
-            this.btnNuevoUsuario = new System.Windows.Forms.Button();
             this.dgwUsuarios = new System.Windows.Forms.DataGridView();
             this.btnSearch = new System.Windows.Forms.Button();
             this.txtPatternSearch = new System.Windows.Forms.TextBox();
@@ -31,7 +30,6 @@
             this.tabMain = new System.Windows.Forms.TabPage();
             this.tabNewUser = new System.Windows.Forms.TabPage();
             this.label17 = new System.Windows.Forms.Label();
-            this.btnAddSaveUser = new System.Windows.Forms.Button();
             this.txtAddUsername = new System.Windows.Forms.TextBox();
             this.cmbAddRol = new System.Windows.Forms.ComboBox();
             this.label11 = new System.Windows.Forms.Label();
@@ -43,6 +41,7 @@
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.tabModificar = new System.Windows.Forms.TabPage();
+            this.txtModId = new System.Windows.Forms.TextBox();
             this.label18 = new System.Windows.Forms.Label();
             this.btnModSave = new System.Windows.Forms.Button();
             this.cmbModRol = new System.Windows.Forms.ComboBox();
@@ -55,22 +54,28 @@
             this.label15 = new System.Windows.Forms.Label();
             this.txtModUsername = new System.Windows.Forms.TextBox();
             this.label16 = new System.Windows.Forms.Label();
-            this.txtModId = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.btnModDelete = new System.Windows.Forms.Button();
+            this.btnAddSaveUser = new System.Windows.Forms.Button();
+            this.btnAddCancel = new System.Windows.Forms.Button();
+            this.tabDelete = new System.Windows.Forms.TabPage();
+            this.btnDeleteUser = new System.Windows.Forms.Button();
+            this.label2 = new System.Windows.Forms.Label();
+            this.txtDelId = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.cmbDelRol = new System.Windows.Forms.ComboBox();
+            this.txtDelFullname = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.txtDelUsername = new System.Windows.Forms.TextBox();
+            this.label20 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgwUsuarios)).BeginInit();
             this.tabControl.SuspendLayout();
             this.tabNewUser.SuspendLayout();
             this.tabModificar.SuspendLayout();
+            this.tabDelete.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // btnNuevoUsuario
-            // 
-            this.btnNuevoUsuario.Location = new System.Drawing.Point(675, 28);
-            this.btnNuevoUsuario.Name = "btnNuevoUsuario";
-            this.btnNuevoUsuario.Size = new System.Drawing.Size(75, 23);
-            this.btnNuevoUsuario.TabIndex = 0;
-            this.btnNuevoUsuario.Text = "Agregar";
-            this.btnNuevoUsuario.UseVisualStyleBackColor = true;
-            this.btnNuevoUsuario.Click += new System.EventHandler(this.btnNuevoUsuario_Click);
             // 
             // dgwUsuarios
             // 
@@ -107,6 +112,7 @@
             this.tabControl.Controls.Add(this.tabMain);
             this.tabControl.Controls.Add(this.tabNewUser);
             this.tabControl.Controls.Add(this.tabModificar);
+            this.tabControl.Controls.Add(this.tabDelete);
             this.tabControl.Location = new System.Drawing.Point(619, 96);
             this.tabControl.Margin = new System.Windows.Forms.Padding(6);
             this.tabControl.Name = "tabControl";
@@ -126,6 +132,7 @@
             // 
             // tabNewUser
             // 
+            this.tabNewUser.Controls.Add(this.btnAddCancel);
             this.tabNewUser.Controls.Add(this.label17);
             this.tabNewUser.Controls.Add(this.btnAddSaveUser);
             this.tabNewUser.Controls.Add(this.txtAddUsername);
@@ -155,16 +162,6 @@
             this.label17.Size = new System.Drawing.Size(167, 25);
             this.label17.TabIndex = 30;
             this.label17.Text = "Nuevo Usuario";
-            // 
-            // btnAddSaveUser
-            // 
-            this.btnAddSaveUser.Location = new System.Drawing.Point(111, 356);
-            this.btnAddSaveUser.Name = "btnAddSaveUser";
-            this.btnAddSaveUser.Size = new System.Drawing.Size(120, 30);
-            this.btnAddSaveUser.TabIndex = 40;
-            this.btnAddSaveUser.Text = "GUARDAR";
-            this.btnAddSaveUser.UseVisualStyleBackColor = true;
-            this.btnAddSaveUser.Click += new System.EventHandler(this.btnAddSaveUser_Click);
             // 
             // txtAddUsername
             // 
@@ -253,6 +250,8 @@
             // 
             // tabModificar
             // 
+            this.tabModificar.Controls.Add(this.btnModDelete);
+            this.tabModificar.Controls.Add(this.label1);
             this.tabModificar.Controls.Add(this.txtModId);
             this.tabModificar.Controls.Add(this.label18);
             this.tabModificar.Controls.Add(this.btnModSave);
@@ -274,6 +273,14 @@
             this.tabModificar.Text = "Modificar";
             this.tabModificar.UseVisualStyleBackColor = true;
             // 
+            // txtModId
+            // 
+            this.txtModId.Enabled = false;
+            this.txtModId.Location = new System.Drawing.Point(164, 91);
+            this.txtModId.Name = "txtModId";
+            this.txtModId.Size = new System.Drawing.Size(130, 20);
+            this.txtModId.TabIndex = 40;
+            // 
             // label18
             // 
             this.label18.AutoSize = true;
@@ -286,7 +293,7 @@
             // 
             // btnModSave
             // 
-            this.btnModSave.Location = new System.Drawing.Point(101, 356);
+            this.btnModSave.Location = new System.Drawing.Point(175, 374);
             this.btnModSave.Name = "btnModSave";
             this.btnModSave.Size = new System.Drawing.Size(140, 30);
             this.btnModSave.TabIndex = 39;
@@ -297,21 +304,21 @@
             // cmbModRol
             // 
             this.cmbModRol.FormattingEnabled = true;
-            this.cmbModRol.Location = new System.Drawing.Point(164, 284);
+            this.cmbModRol.Location = new System.Drawing.Point(164, 312);
             this.cmbModRol.Name = "cmbModRol";
             this.cmbModRol.Size = new System.Drawing.Size(130, 21);
             this.cmbModRol.TabIndex = 33;
             // 
             // txtModFullname
             // 
-            this.txtModFullname.Location = new System.Drawing.Point(164, 240);
+            this.txtModFullname.Location = new System.Drawing.Point(164, 268);
             this.txtModFullname.Name = "txtModFullname";
             this.txtModFullname.Size = new System.Drawing.Size(130, 20);
             this.txtModFullname.TabIndex = 32;
             // 
             // txtModRepeatPassword
             // 
-            this.txtModRepeatPassword.Location = new System.Drawing.Point(164, 196);
+            this.txtModRepeatPassword.Location = new System.Drawing.Point(164, 224);
             this.txtModRepeatPassword.Name = "txtModRepeatPassword";
             this.txtModRepeatPassword.Size = new System.Drawing.Size(130, 20);
             this.txtModRepeatPassword.TabIndex = 31;
@@ -319,7 +326,7 @@
             // 
             // txtModPasswrod
             // 
-            this.txtModPasswrod.Location = new System.Drawing.Point(164, 152);
+            this.txtModPasswrod.Location = new System.Drawing.Point(164, 180);
             this.txtModPasswrod.Name = "txtModPasswrod";
             this.txtModPasswrod.Size = new System.Drawing.Size(130, 20);
             this.txtModPasswrod.TabIndex = 30;
@@ -328,7 +335,7 @@
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(133, 287);
+            this.label12.Location = new System.Drawing.Point(133, 315);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(23, 13);
             this.label12.TabIndex = 38;
@@ -337,7 +344,7 @@
             // label13
             // 
             this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(66, 243);
+            this.label13.Location = new System.Drawing.Point(66, 271);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(90, 13);
             this.label13.TabIndex = 37;
@@ -346,7 +353,7 @@
             // label14
             // 
             this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(48, 199);
+            this.label14.Location = new System.Drawing.Point(48, 227);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(108, 13);
             this.label14.TabIndex = 36;
@@ -355,7 +362,7 @@
             // label15
             // 
             this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(95, 155);
+            this.label15.Location = new System.Drawing.Point(95, 183);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(61, 13);
             this.label15.TabIndex = 35;
@@ -364,7 +371,7 @@
             // 
             // txtModUsername
             // 
-            this.txtModUsername.Location = new System.Drawing.Point(164, 108);
+            this.txtModUsername.Location = new System.Drawing.Point(164, 136);
             this.txtModUsername.Name = "txtModUsername";
             this.txtModUsername.Size = new System.Drawing.Size(130, 20);
             this.txtModUsername.TabIndex = 29;
@@ -372,19 +379,169 @@
             // label16
             // 
             this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(73, 111);
+            this.label16.Location = new System.Drawing.Point(73, 139);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(83, 13);
             this.label16.TabIndex = 34;
             this.label16.Text = "Nombre Usuario";
             this.label16.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // txtModId
+            // label1
             // 
-            this.txtModId.Location = new System.Drawing.Point(164, 77);
-            this.txtModId.Name = "txtModId";
-            this.txtModId.Size = new System.Drawing.Size(100, 20);
-            this.txtModId.TabIndex = 40;
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(138, 94);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(18, 13);
+            this.label1.TabIndex = 41;
+            this.label1.Text = "ID";
+            // 
+            // btnModDelete
+            // 
+            this.btnModDelete.Location = new System.Drawing.Point(27, 374);
+            this.btnModDelete.Name = "btnModDelete";
+            this.btnModDelete.Size = new System.Drawing.Size(140, 30);
+            this.btnModDelete.TabIndex = 42;
+            this.btnModDelete.Text = "CANCELAR";
+            this.btnModDelete.UseVisualStyleBackColor = true;
+            this.btnModDelete.Click += new System.EventHandler(this.btnModDelete_Click);
+            // 
+            // btnAddSaveUser
+            // 
+            this.btnAddSaveUser.Location = new System.Drawing.Point(179, 367);
+            this.btnAddSaveUser.Name = "btnAddSaveUser";
+            this.btnAddSaveUser.Size = new System.Drawing.Size(120, 30);
+            this.btnAddSaveUser.TabIndex = 40;
+            this.btnAddSaveUser.Text = "GUARDAR";
+            this.btnAddSaveUser.UseVisualStyleBackColor = true;
+            this.btnAddSaveUser.Click += new System.EventHandler(this.btnAddSaveUser_Click);
+            // 
+            // btnAddCancel
+            // 
+            this.btnAddCancel.Location = new System.Drawing.Point(43, 367);
+            this.btnAddCancel.Name = "btnAddCancel";
+            this.btnAddCancel.Size = new System.Drawing.Size(120, 30);
+            this.btnAddCancel.TabIndex = 41;
+            this.btnAddCancel.Text = "CANCELAR";
+            this.btnAddCancel.UseVisualStyleBackColor = true;
+            this.btnAddCancel.Click += new System.EventHandler(this.btnAddCancel_Click);
+            // 
+            // tabDelete
+            // 
+            this.tabDelete.Controls.Add(this.button1);
+            this.tabDelete.Controls.Add(this.btnDeleteUser);
+            this.tabDelete.Controls.Add(this.label2);
+            this.tabDelete.Controls.Add(this.txtDelId);
+            this.tabDelete.Controls.Add(this.label3);
+            this.tabDelete.Controls.Add(this.cmbDelRol);
+            this.tabDelete.Controls.Add(this.txtDelFullname);
+            this.tabDelete.Controls.Add(this.label4);
+            this.tabDelete.Controls.Add(this.label5);
+            this.tabDelete.Controls.Add(this.txtDelUsername);
+            this.tabDelete.Controls.Add(this.label20);
+            this.tabDelete.Location = new System.Drawing.Point(4, 22);
+            this.tabDelete.Name = "tabDelete";
+            this.tabDelete.Padding = new System.Windows.Forms.Padding(3);
+            this.tabDelete.Size = new System.Drawing.Size(342, 424);
+            this.tabDelete.TabIndex = 3;
+            this.tabDelete.Text = "Eliminar";
+            this.tabDelete.UseVisualStyleBackColor = true;
+            // 
+            // btnDeleteUser
+            // 
+            this.btnDeleteUser.Location = new System.Drawing.Point(179, 368);
+            this.btnDeleteUser.Name = "btnDeleteUser";
+            this.btnDeleteUser.Size = new System.Drawing.Size(120, 30);
+            this.btnDeleteUser.TabIndex = 57;
+            this.btnDeleteUser.Text = "ELIMINAR";
+            this.btnDeleteUser.UseVisualStyleBackColor = true;
+            this.btnDeleteUser.Click += new System.EventHandler(this.btnDeleteUser_Click);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(128, 106);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(18, 13);
+            this.label2.TabIndex = 56;
+            this.label2.Text = "ID";
+            // 
+            // txtDelId
+            // 
+            this.txtDelId.Enabled = false;
+            this.txtDelId.Location = new System.Drawing.Point(157, 103);
+            this.txtDelId.Name = "txtDelId";
+            this.txtDelId.Size = new System.Drawing.Size(130, 20);
+            this.txtDelId.TabIndex = 55;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(73, 28);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(185, 25);
+            this.label3.TabIndex = 45;
+            this.label3.Text = "Eliminar Usuario";
+            // 
+            // cmbDelRol
+            // 
+            this.cmbDelRol.FormattingEnabled = true;
+            this.cmbDelRol.Location = new System.Drawing.Point(157, 235);
+            this.cmbDelRol.Name = "cmbDelRol";
+            this.cmbDelRol.Size = new System.Drawing.Size(130, 21);
+            this.cmbDelRol.TabIndex = 48;
+            // 
+            // txtDelFullname
+            // 
+            this.txtDelFullname.Location = new System.Drawing.Point(157, 191);
+            this.txtDelFullname.Name = "txtDelFullname";
+            this.txtDelFullname.Size = new System.Drawing.Size(130, 20);
+            this.txtDelFullname.TabIndex = 47;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(123, 238);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(23, 13);
+            this.label4.TabIndex = 53;
+            this.label4.Text = "Rol";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(56, 194);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(90, 13);
+            this.label5.TabIndex = 52;
+            this.label5.Text = "Apellido y nombre";
+            // 
+            // txtDelUsername
+            // 
+            this.txtDelUsername.Enabled = false;
+            this.txtDelUsername.Location = new System.Drawing.Point(157, 147);
+            this.txtDelUsername.Name = "txtDelUsername";
+            this.txtDelUsername.Size = new System.Drawing.Size(130, 20);
+            this.txtDelUsername.TabIndex = 43;
+            // 
+            // label20
+            // 
+            this.label20.AutoSize = true;
+            this.label20.Location = new System.Drawing.Point(63, 150);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(83, 13);
+            this.label20.TabIndex = 49;
+            this.label20.Text = "Nombre Usuario";
+            this.label20.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(43, 368);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(120, 30);
+            this.button1.TabIndex = 58;
+            this.button1.Text = "CANCELAR";
+            this.button1.UseVisualStyleBackColor = true;
             // 
             // frmGestionUsuario
             // 
@@ -395,7 +552,6 @@
             this.Controls.Add(this.txtPatternSearch);
             this.Controls.Add(this.btnSearch);
             this.Controls.Add(this.dgwUsuarios);
-            this.Controls.Add(this.btnNuevoUsuario);
             this.Name = "frmGestionUsuario";
             this.Text = "Gestión de Usuarios";
             this.Load += new System.EventHandler(this.frmGestionUsuario_Load);
@@ -405,6 +561,8 @@
             this.tabNewUser.PerformLayout();
             this.tabModificar.ResumeLayout(false);
             this.tabModificar.PerformLayout();
+            this.tabDelete.ResumeLayout(false);
+            this.tabDelete.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -412,7 +570,6 @@
 
         #endregion
 
-        private System.Windows.Forms.Button btnNuevoUsuario;
         private System.Windows.Forms.DataGridView dgwUsuarios;
         private System.Windows.Forms.Button btnSearch;
         private System.Windows.Forms.TextBox txtPatternSearch;
@@ -445,5 +602,20 @@
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.TextBox txtModId;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button btnModDelete;
+        private System.Windows.Forms.Button btnAddCancel;
+        private System.Windows.Forms.TabPage tabDelete;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnDeleteUser;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.TextBox txtDelId;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.ComboBox cmbDelRol;
+        private System.Windows.Forms.TextBox txtDelFullname;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.TextBox txtDelUsername;
+        private System.Windows.Forms.Label label20;
     }
 }
