@@ -57,3 +57,4 @@ C:\Users\gonza\OneDrive\Documentos\Visual Studio 2010\Projects\LPOOI_GRUPO_01\Vi
 C:\Users\gonza\OneDrive\Documentos\Visual Studio 2010\Projects\LPOOI_GRUPO_01\Vistas\obj\x86\Debug\Vistas.csproj.GenerateResource.Cache
 C:\Users\gonza\OneDrive\Documentos\Visual Studio 2010\Projects\LPOOI_GRUPO_01\Vistas\obj\x86\Debug\Vistas.frmAltaUsuario.resources
 C:\Users\gonza\OneDrive\Documentos\Visual Studio 2010\Projects\LPOOI_GRUPO_01\Vistas\obj\x86\Debug\Vistas.frmGestionUsuario.resources
+C:\Users\gonza\OneDrive\Documentos\Visual Studio 2010\Projects\LPOOI_GRUPO_01\Vistas\obj\x86\Debug\Vistas.frmBienvenida.resources

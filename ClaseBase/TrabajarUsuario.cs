@@ -149,5 +149,51 @@ namespace ClaseBase {
             conexion.Close();
 
         }
+
+        public static DataTable findUsuarioByUsername(string username) {
+            SqlConnection conexion = new SqlConnection(ClaseBase.Properties.Settings.Default.agenciaConnectionString);
+
+            SqlCommand cmd = new SqlCommand();
+
+            
+            cmd.CommandText = "SELECT * ";
+            cmd.CommandText += " FROM Usuario AS U ";
+
+            cmd.CommandText += " LEFT JOIN Rol AS R ON (R.rol_codigo = U.rol_codigo) ";
+
+            cmd.CommandText += " WHERE U.usu_nombreUsuario = @username ";
+            
+            /*
+            cmd.CommandText = "SELECT usu_id, usu_nombreUsuario, ";
+            cmd.CommandText += "usu_password, usu_apellidoNombre, ";
+            cmd.CommandText += "U.rol_codigo, rol_descripcion ";
+
+            cmd.CommandText += " FROM Usuario AS U, Rol AS R ";
+            cmd.CommandText += " WHERE usu_nombreUsuario = @username ";
+
+            cmd.CommandText += "LEFT JOIN Rol AS R ON (R.rol_codigo = U.rol_codigo) "; */
+
+            /*
+            cmd.CommandText += "usu_nombreUsuario AS 'Username', ";
+            cmd.CommandText += "usu_password AS 'Contraseña', ";
+            cmd.CommandText += "usu_apellidoNombre AS 'Apellido y nombre', ";
+            cmd.CommandText += "rol_descripcion AS 'Rol', ";
+            cmd.CommandText += "U.rol_codigo AS 'ID Rol' ";
+            cmd.CommandText += "FROM Usuario AS U ";
+            cmd.CommandText += "LEFT JOIN Rol AS R ON (R.rol_codigo = U.rol_codigo) ";
+             */
+
+            cmd.CommandType = CommandType.Text;
+            cmd.Connection = conexion;
+
+            cmd.Parameters.AddWithValue("@username", username);
+
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+
+            return dt;
+        }
     }
 }

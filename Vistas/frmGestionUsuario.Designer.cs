@@ -87,6 +87,7 @@
             this.dgwUsuarios.Name = "dgwUsuarios";
             this.dgwUsuarios.Size = new System.Drawing.Size(588, 450);
             this.dgwUsuarios.TabIndex = 1;
+            //this.dgwUsuarios.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgwUsuarios_CellContentClick);
             this.dgwUsuarios.CurrentCellChanged += new System.EventHandler(this.dgwUsuarios_CurrentCellChanged);
             // 
             // btnSearch

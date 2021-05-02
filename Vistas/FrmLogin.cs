@@ -49,16 +49,6 @@ namespace Vistas
             FrmLogin.ActiveForm.Close();
         }
 
-        private void btnAceptar_MouseHover(object sender, EventArgs e)
-        {
-            btnAceptar.BackColor = Color.Azure;
-        }
-
-        private void btnAceptar_MouseLeave(object sender, EventArgs e)
-        {
-            btnAceptar.BackColor = Color.Empty;
-        }
-
         private void btnCancelar_MouseHover(object sender, EventArgs e)
         {
             btnCancelar.BackColor = Color.AntiqueWhite;
@@ -67,6 +57,32 @@ namespace Vistas
         private void btnCancelar_MouseLeave(object sender, EventArgs e)
         {
             btnCancelar.BackColor = Color.Empty;
+        }
+
+        private void lblContrasenia_Click(object sender, EventArgs e) {
+
+        }
+
+        private void lblNombreUsuario_Click(object sender, EventArgs e) {
+
+        }
+
+        private void FrmLogin_Load(object sender, EventArgs e) {
+
+        }
+
+        private void btnIngresar_Click(object sender, EventArgs e) {
+            DataTable dt = TrabajarUsuario.findUsuarioByUsername(txtNombreUsuario.Text);
+            if (dt.Rows.Count == 1 && dt.Rows[0][1].ToString() == txtNombreUsuario.Text && dt.Rows[0][2].ToString() == txtContrasenia.Text) {
+                //MessageBox.Show("Usuario y contraseña correctos\nRol: " + dt.Rows[0][6].ToString());    //Posicion 5 y 6 representa el id de rol
+                MessageBox.Show("Bienvenido/a " + dt.Rows[0][1].ToString() + "\nRol: " + dt.Rows[0][6].ToString());
+                FrmLogin.ActiveForm.Hide();
+                FrmMain fInicio = new FrmMain();
+                fInicio.Show();
+                this.Close();
+            } else {
+                MessageBox.Show("Usuario y/o contraseña incorrectos");
+            }
         }
     }
 }
