@@ -101,7 +101,8 @@ namespace Vistas
         private void btnCancelar_Click(object sender, EventArgs e)
         {
             FrmAltaInquilino.ActiveForm.Hide();
-            FrmMain inicio = new FrmMain();
+            FrmPrincipal inicio = new FrmPrincipal();
+            //FrmMain inicio = new FrmMain();
             inicio.Show();
             this.Close();
         }

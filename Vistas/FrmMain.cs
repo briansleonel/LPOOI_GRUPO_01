@@ -6,7 +6,7 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
-
+using ClaseBase;
 namespace Vistas
 {
     public partial class FrmMain : Form
@@ -18,8 +18,10 @@ namespace Vistas
 
         private void altaDeEdificiosToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            FrmAltaEdificio fEdificioAlta = new FrmAltaEdificio();
-            fEdificioAlta.Show();
+            this.Hide();
+            FrmAltaEdificio oAltaEdif = new FrmAltaEdificio();
+            oAltaEdif.Show();
+            this.Close();
         }
 
 
@@ -30,7 +32,7 @@ namespace Vistas
         /// <param name="e"></param>
         private void btnSalir_Click(object sender, EventArgs e)
         {
-            var resultado = MessageBox.Show("Está seguro de cerrar sesión", "Seleccione", MessageBoxButtons.YesNo);
+            var resultado = MessageBox.Show("Está seguro de cerrar sesión", "Seleccione", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (resultado == DialogResult.Yes)
             {
                 FrmMain.ActiveForm.Hide();
@@ -45,8 +47,8 @@ namespace Vistas
         private void btnAltaInquilino_Click(object sender, EventArgs e)
         {
             this.Hide();
-            FrmAltaInquilino oAltaInquilino = new FrmAltaInquilino();
-            oAltaInquilino.Show();
+            frmGestionInquilino oGestionInquilino = new frmGestionInquilino();
+            oGestionInquilino.Show();
             this.Close();
         }
 
@@ -65,5 +67,45 @@ namespace Vistas
             oAltaEdif.Show();
             this.Close();
         }
+
+        private void FrmMain_Load(object sender, EventArgs e) {
+            lblUserlogin.Text = UserLogin.usuLog_FullName + " Rol: " +UserLogin.rolLog_Descripcion;
+            autorizarUsuario ();
+        }
+
+        private void btnGestionarUsuarios_Click(object sender, EventArgs e) {
+            frmGestionUsuario a = new frmGestionUsuario();
+            a.Show();
+        }
+
+        private void btnAltaAlquiler_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            frmGestionAlquiler oGestionAlquiler = new frmGestionAlquiler();
+            oGestionAlquiler.Show();
+            this.Close();
+        }
+        private void autorizarUsuario ()
+        {
+            if (UserLogin.rolLog_Codigo == 1)
+            {
+                tbInquilino.Enabled = false;
+                tbAlquiler.Enabled = false;
+                
+                
+            }
+            else
+            {
+                if (UserLogin.rolLog_Codigo == 2)
+                {
+                    lblAcesoUsuario.Text = "Sin Permiso Suficiente!!!!!!!";
+                    tbUsuario.Enabled = false;
+                    tbEdificio.Enabled = false;
+                    tbDepartamento.Enabled = false;
+                }
+            }
+        }
+        
+        
     }
 }

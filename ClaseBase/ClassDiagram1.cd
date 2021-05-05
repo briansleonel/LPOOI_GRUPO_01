@@ -42,5 +42,12 @@
       <FileName>Rol.cs</FileName>
     </TypeIdentifier>
   </Class>
+  <Class Name="ClaseBase.UserLogin">
+    <Position X="6" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QCAAAQAgAAAIAAAAAAAAEAABADBAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>UserLogin.cs</FileName>
+    </TypeIdentifier>
+  </Class>
   <Font Name="Segoe UI" Size="9" />
 </ClassDiagram>

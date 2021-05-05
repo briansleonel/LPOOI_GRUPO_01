@@ -13,3 +13,21 @@ C:\Users\gonza\OneDrive\Documentos\Visual Studio 2010\Projects\LPOO01_GRUPO_01\C
 C:\Users\gonza\OneDrive\Documentos\Visual Studio 2010\Projects\LPOO01_GRUPO_01\ClaseBase\obj\Debug\ClaseBase.csprojResolveAssemblyReference.cache
 C:\Users\gonza\OneDrive\Documentos\Visual Studio 2010\Projects\LPOO01_GRUPO_01\ClaseBase\obj\Debug\ClaseBase.dll
 C:\Users\gonza\OneDrive\Documentos\Visual Studio 2010\Projects\LPOO01_GRUPO_01\ClaseBase\obj\Debug\ClaseBase.pdb
+C:\Users\gonza\OneDrive\Documentos\Visual Studio 2010\Projects\LPOOI_GRUPO_01\ClaseBase\bin\Debug\ClaseBase.dll.config
+C:\Users\gonza\OneDrive\Documentos\Visual Studio 2010\Projects\LPOOI_GRUPO_01\ClaseBase\bin\Debug\ClaseBase.dll
+C:\Users\gonza\OneDrive\Documentos\Visual Studio 2010\Projects\LPOOI_GRUPO_01\ClaseBase\bin\Debug\ClaseBase.pdb
+C:\Users\gonza\OneDrive\Documentos\Visual Studio 2010\Projects\LPOOI_GRUPO_01\ClaseBase\obj\Debug\ClaseBase.csprojResolveAssemblyReference.cache
+C:\Users\gonza\OneDrive\Documentos\Visual Studio 2010\Projects\LPOOI_GRUPO_01\ClaseBase\obj\Debug\ClaseBase.dll
+C:\Users\gonza\OneDrive\Documentos\Visual Studio 2010\Projects\LPOOI_GRUPO_01\ClaseBase\obj\Debug\ClaseBase.pdb
+C:\Users\MasterZhord\Documents\LPOOI_GRUPO_01\ClaseBase\bin\Debug\ClaseBase.dll.config
+C:\Users\MasterZhord\Documents\LPOOI_GRUPO_01\ClaseBase\bin\Debug\ClaseBase.dll
+C:\Users\MasterZhord\Documents\LPOOI_GRUPO_01\ClaseBase\bin\Debug\ClaseBase.pdb
+C:\Users\MasterZhord\Documents\LPOOI_GRUPO_01\ClaseBase\obj\Debug\ClaseBase.csprojResolveAssemblyReference.cache
+C:\Users\MasterZhord\Documents\LPOOI_GRUPO_01\ClaseBase\obj\Debug\ClaseBase.dll
+C:\Users\MasterZhord\Documents\LPOOI_GRUPO_01\ClaseBase\obj\Debug\ClaseBase.pdb
+C:\Users\MARCGI\Downloads\LPOO01_GRUPO_01 Funcional\LPOOI_GRUPO_01\ClaseBase\bin\Debug\ClaseBase.dll.config
+C:\Users\MARCGI\Downloads\LPOO01_GRUPO_01 Funcional\LPOOI_GRUPO_01\ClaseBase\bin\Debug\ClaseBase.dll
+C:\Users\MARCGI\Downloads\LPOO01_GRUPO_01 Funcional\LPOOI_GRUPO_01\ClaseBase\bin\Debug\ClaseBase.pdb
+C:\Users\MARCGI\Downloads\LPOO01_GRUPO_01 Funcional\LPOOI_GRUPO_01\ClaseBase\obj\Debug\ClaseBase.csprojResolveAssemblyReference.cache
+C:\Users\MARCGI\Downloads\LPOO01_GRUPO_01 Funcional\LPOOI_GRUPO_01\ClaseBase\obj\Debug\ClaseBase.dll
+C:\Users\MARCGI\Downloads\LPOO01_GRUPO_01 Funcional\LPOOI_GRUPO_01\ClaseBase\obj\Debug\ClaseBase.pdb

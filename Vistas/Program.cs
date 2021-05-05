@@ -13,12 +13,17 @@ namespace Vistas
         [STAThread]
         static void Main()
         {
+            
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
 
             FrmLogin oFrmLogin = new FrmLogin();
             oFrmLogin.Show();
-            oFrmLogin.FormClosed += MainForm_Closed;
+            //oFrmLogin.FormClosed += MainForm_Closed;
+            //frmGestionAlquiler a = new frmGestionAlquiler();
+            //frmGestionInquilino a = new frmGestionInquilino();
+            //frmGestionUsuario a = new frmGestionUsuario();
+            //a.Show();
 
             Application.Run();
         }

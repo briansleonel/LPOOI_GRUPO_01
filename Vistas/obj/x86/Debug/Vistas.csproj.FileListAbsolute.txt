@@ -39,3 +39,63 @@ C:\Users\gonza\OneDrive\Documentos\Visual Studio 2010\Projects\LPOO01_GRUPO_01\V
 C:\Users\gonza\OneDrive\Documentos\Visual Studio 2010\Projects\LPOO01_GRUPO_01\Vistas\obj\x86\Debug\Vistas.FrmMain.resources
 C:\Users\gonza\OneDrive\Documentos\Visual Studio 2010\Projects\LPOO01_GRUPO_01\Vistas\obj\x86\Debug\Vistas.Properties.Resources.resources
 C:\Users\gonza\OneDrive\Documentos\Visual Studio 2010\Projects\LPOO01_GRUPO_01\Vistas\obj\x86\Debug\Vistas.csproj.GenerateResource.Cache
+C:\Users\gonza\OneDrive\Documentos\Visual Studio 2010\Projects\LPOO01_GRUPO_01\Vistas\bin\Debug\Vistas.exe.config
+C:\Users\gonza\OneDrive\Documentos\Visual Studio 2010\Projects\LPOOI_GRUPO_01\Vistas\bin\Debug\Vistas.exe.config
+C:\Users\gonza\OneDrive\Documentos\Visual Studio 2010\Projects\LPOOI_GRUPO_01\Vistas\obj\x86\Debug\Vistas.exe
+C:\Users\gonza\OneDrive\Documentos\Visual Studio 2010\Projects\LPOOI_GRUPO_01\Vistas\obj\x86\Debug\Vistas.pdb
+C:\Users\gonza\OneDrive\Documentos\Visual Studio 2010\Projects\LPOOI_GRUPO_01\Vistas\bin\Debug\Vistas.exe
+C:\Users\gonza\OneDrive\Documentos\Visual Studio 2010\Projects\LPOOI_GRUPO_01\Vistas\bin\Debug\Vistas.pdb
+C:\Users\gonza\OneDrive\Documentos\Visual Studio 2010\Projects\LPOOI_GRUPO_01\Vistas\bin\Debug\ClaseBase.dll
+C:\Users\gonza\OneDrive\Documentos\Visual Studio 2010\Projects\LPOOI_GRUPO_01\Vistas\bin\Debug\ClaseBase.pdb
+C:\Users\gonza\OneDrive\Documentos\Visual Studio 2010\Projects\LPOOI_GRUPO_01\Vistas\obj\x86\Debug\Vistas.csprojResolveAssemblyReference.cache
+C:\Users\gonza\OneDrive\Documentos\Visual Studio 2010\Projects\LPOOI_GRUPO_01\Vistas\obj\x86\Debug\Vistas.FrmAltaDepartamento.resources
+C:\Users\gonza\OneDrive\Documentos\Visual Studio 2010\Projects\LPOOI_GRUPO_01\Vistas\obj\x86\Debug\Vistas.FrmAltaEdificio.resources
+C:\Users\gonza\OneDrive\Documentos\Visual Studio 2010\Projects\LPOOI_GRUPO_01\Vistas\obj\x86\Debug\Vistas.FrmAltaInquilino.resources
+C:\Users\gonza\OneDrive\Documentos\Visual Studio 2010\Projects\LPOOI_GRUPO_01\Vistas\obj\x86\Debug\Vistas.FrmLogin.resources
+C:\Users\gonza\OneDrive\Documentos\Visual Studio 2010\Projects\LPOOI_GRUPO_01\Vistas\obj\x86\Debug\Vistas.FrmMain.resources
+C:\Users\gonza\OneDrive\Documentos\Visual Studio 2010\Projects\LPOOI_GRUPO_01\Vistas\obj\x86\Debug\Vistas.Properties.Resources.resources
+C:\Users\gonza\OneDrive\Documentos\Visual Studio 2010\Projects\LPOOI_GRUPO_01\Vistas\obj\x86\Debug\Vistas.csproj.GenerateResource.Cache
+C:\Users\gonza\OneDrive\Documentos\Visual Studio 2010\Projects\LPOOI_GRUPO_01\Vistas\obj\x86\Debug\Vistas.frmAltaUsuario.resources
+C:\Users\gonza\OneDrive\Documentos\Visual Studio 2010\Projects\LPOOI_GRUPO_01\Vistas\obj\x86\Debug\Vistas.frmGestionUsuario.resources
+C:\Users\gonza\OneDrive\Documentos\Visual Studio 2010\Projects\LPOOI_GRUPO_01\Vistas\obj\x86\Debug\Vistas.frmBienvenida.resources
+C:\Users\MasterZhord\Documents\LPOOI_GRUPO_01\Vistas\bin\Debug\Vistas.exe.config
+C:\Users\MasterZhord\Documents\LPOOI_GRUPO_01\Vistas\obj\x86\Debug\Vistas.exe
+C:\Users\MasterZhord\Documents\LPOOI_GRUPO_01\Vistas\obj\x86\Debug\Vistas.pdb
+C:\Users\MasterZhord\Documents\LPOOI_GRUPO_01\Vistas\bin\Debug\Vistas.exe
+C:\Users\MasterZhord\Documents\LPOOI_GRUPO_01\Vistas\bin\Debug\Vistas.pdb
+C:\Users\MasterZhord\Documents\LPOOI_GRUPO_01\Vistas\bin\Debug\ClaseBase.dll
+C:\Users\MasterZhord\Documents\LPOOI_GRUPO_01\Vistas\bin\Debug\ClaseBase.pdb
+C:\Users\MasterZhord\Documents\LPOOI_GRUPO_01\Vistas\obj\x86\Debug\Vistas.csprojResolveAssemblyReference.cache
+C:\Users\MasterZhord\Documents\LPOOI_GRUPO_01\Vistas\obj\x86\Debug\Vistas.FrmAltaDepartamento.resources
+C:\Users\MasterZhord\Documents\LPOOI_GRUPO_01\Vistas\obj\x86\Debug\Vistas.FrmAltaEdificio.resources
+C:\Users\MasterZhord\Documents\LPOOI_GRUPO_01\Vistas\obj\x86\Debug\Vistas.FrmAltaInquilino.resources
+C:\Users\MasterZhord\Documents\LPOOI_GRUPO_01\Vistas\obj\x86\Debug\Vistas.frmAltaUsuario.resources
+C:\Users\MasterZhord\Documents\LPOOI_GRUPO_01\Vistas\obj\x86\Debug\Vistas.frmBienvenida.resources
+C:\Users\MasterZhord\Documents\LPOOI_GRUPO_01\Vistas\obj\x86\Debug\Vistas.FrmLogin.resources
+C:\Users\MasterZhord\Documents\LPOOI_GRUPO_01\Vistas\obj\x86\Debug\Vistas.FrmMain.resources
+C:\Users\MasterZhord\Documents\LPOOI_GRUPO_01\Vistas\obj\x86\Debug\Vistas.frmGestionUsuario.resources
+C:\Users\MasterZhord\Documents\LPOOI_GRUPO_01\Vistas\obj\x86\Debug\Vistas.Properties.Resources.resources
+C:\Users\MasterZhord\Documents\LPOOI_GRUPO_01\Vistas\obj\x86\Debug\Vistas.csproj.GenerateResource.Cache
+C:\Users\MasterZhord\Documents\LPOOI_GRUPO_01\Vistas\obj\x86\Debug\Vistas.frmGestionInquilino.resources
+C:\Users\MasterZhord\Documents\LPOOI_GRUPO_01\Vistas\obj\x86\Debug\Vistas.frmGestionAlquiler.resources
+C:\Users\MARCGI\Downloads\LPOO01_GRUPO_01 Funcional\LPOOI_GRUPO_01\Vistas\bin\Debug\Vistas.exe.config
+C:\Users\MARCGI\Downloads\LPOO01_GRUPO_01 Funcional\LPOOI_GRUPO_01\Vistas\obj\x86\Debug\Vistas.exe
+C:\Users\MARCGI\Downloads\LPOO01_GRUPO_01 Funcional\LPOOI_GRUPO_01\Vistas\obj\x86\Debug\Vistas.pdb
+C:\Users\MARCGI\Downloads\LPOO01_GRUPO_01 Funcional\LPOOI_GRUPO_01\Vistas\bin\Debug\Vistas.exe
+C:\Users\MARCGI\Downloads\LPOO01_GRUPO_01 Funcional\LPOOI_GRUPO_01\Vistas\bin\Debug\Vistas.pdb
+C:\Users\MARCGI\Downloads\LPOO01_GRUPO_01 Funcional\LPOOI_GRUPO_01\Vistas\bin\Debug\ClaseBase.dll
+C:\Users\MARCGI\Downloads\LPOO01_GRUPO_01 Funcional\LPOOI_GRUPO_01\Vistas\bin\Debug\ClaseBase.pdb
+C:\Users\MARCGI\Downloads\LPOO01_GRUPO_01 Funcional\LPOOI_GRUPO_01\Vistas\obj\x86\Debug\Vistas.csprojResolveAssemblyReference.cache
+C:\Users\MARCGI\Downloads\LPOO01_GRUPO_01 Funcional\LPOOI_GRUPO_01\Vistas\obj\x86\Debug\Vistas.frmGestionAlquiler.resources
+C:\Users\MARCGI\Downloads\LPOO01_GRUPO_01 Funcional\LPOOI_GRUPO_01\Vistas\obj\x86\Debug\Vistas.frmGestionInquilino.resources
+C:\Users\MARCGI\Downloads\LPOO01_GRUPO_01 Funcional\LPOOI_GRUPO_01\Vistas\obj\x86\Debug\Vistas.FrmAltaDepartamento.resources
+C:\Users\MARCGI\Downloads\LPOO01_GRUPO_01 Funcional\LPOOI_GRUPO_01\Vistas\obj\x86\Debug\Vistas.FrmAltaEdificio.resources
+C:\Users\MARCGI\Downloads\LPOO01_GRUPO_01 Funcional\LPOOI_GRUPO_01\Vistas\obj\x86\Debug\Vistas.FrmAltaInquilino.resources
+C:\Users\MARCGI\Downloads\LPOO01_GRUPO_01 Funcional\LPOOI_GRUPO_01\Vistas\obj\x86\Debug\Vistas.frmAltaUsuario.resources
+C:\Users\MARCGI\Downloads\LPOO01_GRUPO_01 Funcional\LPOOI_GRUPO_01\Vistas\obj\x86\Debug\Vistas.frmBienvenida.resources
+C:\Users\MARCGI\Downloads\LPOO01_GRUPO_01 Funcional\LPOOI_GRUPO_01\Vistas\obj\x86\Debug\Vistas.FrmLogin.resources
+C:\Users\MARCGI\Downloads\LPOO01_GRUPO_01 Funcional\LPOOI_GRUPO_01\Vistas\obj\x86\Debug\Vistas.FrmMain.resources
+C:\Users\MARCGI\Downloads\LPOO01_GRUPO_01 Funcional\LPOOI_GRUPO_01\Vistas\obj\x86\Debug\Vistas.frmGestionUsuario.resources
+C:\Users\MARCGI\Downloads\LPOO01_GRUPO_01 Funcional\LPOOI_GRUPO_01\Vistas\obj\x86\Debug\Vistas.Properties.Resources.resources
+C:\Users\MARCGI\Downloads\LPOO01_GRUPO_01 Funcional\LPOOI_GRUPO_01\Vistas\obj\x86\Debug\Vistas.csproj.GenerateResource.Cache
+C:\Users\MARCGI\Downloads\LPOO01_GRUPO_01 Funcional\LPOOI_GRUPO_01\Vistas\obj\x86\Debug\Vistas.FrmPrincipal.resources
