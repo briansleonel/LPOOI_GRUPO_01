@@ -31,3 +31,9 @@ C:\Users\MARCGI\Downloads\LPOO01_GRUPO_01 Funcional\LPOOI_GRUPO_01\ClaseBase\bin
 C:\Users\MARCGI\Downloads\LPOO01_GRUPO_01 Funcional\LPOOI_GRUPO_01\ClaseBase\obj\Debug\ClaseBase.csprojResolveAssemblyReference.cache
 C:\Users\MARCGI\Downloads\LPOO01_GRUPO_01 Funcional\LPOOI_GRUPO_01\ClaseBase\obj\Debug\ClaseBase.dll
 C:\Users\MARCGI\Downloads\LPOO01_GRUPO_01 Funcional\LPOOI_GRUPO_01\ClaseBase\obj\Debug\ClaseBase.pdb
+C:\Users\MARCGI\Documents\git at\ClaseBase\bin\Debug\ClaseBase.dll.config
+C:\Users\MARCGI\Documents\git at\ClaseBase\bin\Debug\ClaseBase.dll
+C:\Users\MARCGI\Documents\git at\ClaseBase\bin\Debug\ClaseBase.pdb
+C:\Users\MARCGI\Documents\git at\ClaseBase\obj\Debug\ClaseBase.csprojResolveAssemblyReference.cache
+C:\Users\MARCGI\Documents\git at\ClaseBase\obj\Debug\ClaseBase.dll
+C:\Users\MARCGI\Documents\git at\ClaseBase\obj\Debug\ClaseBase.pdb

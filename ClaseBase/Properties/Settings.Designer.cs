@@ -26,9 +26,8 @@ namespace ClaseBase.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=.\\SQLEXPRESS;AttachDbFilename=\"C:\\Users\\MARCGI\\Downloads\\LPOO01_GRUPO" +
-            "_01 Funcional\\LPOOI_GRUPO_01\\agencia.mdf\";Integrated Security=True;Connect Timeo" +
-            "ut=30;User Instance=True")]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=.\\SQLEXPRESS;AttachDbFilename=\"C:\\Users\\MARCGI\\Documents\\git at\\agenc" +
+            "ia.mdf\";Integrated Security=True;Connect Timeout=30;User Instance=True")]
         public string agenciaConnectionString {
             get {
                 return ((string)(this["agenciaConnectionString"]));
