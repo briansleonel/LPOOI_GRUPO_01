@@ -27,7 +27,6 @@
             this.btnSearch = new System.Windows.Forms.Button();
             this.txtPatternSearch = new System.Windows.Forms.TextBox();
             this.tabControl = new System.Windows.Forms.TabControl();
-            this.tabMain = new System.Windows.Forms.TabPage();
             this.tabNewUser = new System.Windows.Forms.TabPage();
             this.btnAddCancel = new System.Windows.Forms.Button();
             this.label17 = new System.Windows.Forms.Label();
@@ -64,7 +63,6 @@
             this.label2 = new System.Windows.Forms.Label();
             this.txtDelId = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.cmbDelRol = new System.Windows.Forms.ComboBox();
             this.txtDelFullname = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
@@ -72,15 +70,22 @@
             this.label20 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.btnVolverAtras = new System.Windows.Forms.Button();
+            this.gpbOperador = new System.Windows.Forms.GroupBox();
+            this.lblNuevoOperador = new System.Windows.Forms.Label();
+            this.lblOperador = new System.Windows.Forms.Label();
+            this.txtEliminarRol = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgwUsuarios)).BeginInit();
             this.tabControl.SuspendLayout();
             this.tabNewUser.SuspendLayout();
             this.tabModificar.SuspendLayout();
             this.tabDelete.SuspendLayout();
+            this.gpbOperador.SuspendLayout();
             this.SuspendLayout();
             // 
             // dgwUsuarios
             // 
+            this.dgwUsuarios.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgwUsuarios.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dgwUsuarios.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgwUsuarios.Location = new System.Drawing.Point(15, 196);
             this.dgwUsuarios.Margin = new System.Windows.Forms.Padding(6);
@@ -112,7 +117,6 @@
             // 
             // tabControl
             // 
-            this.tabControl.Controls.Add(this.tabMain);
             this.tabControl.Controls.Add(this.tabNewUser);
             this.tabControl.Controls.Add(this.tabModificar);
             this.tabControl.Controls.Add(this.tabDelete);
@@ -122,16 +126,6 @@
             this.tabControl.SelectedIndex = 0;
             this.tabControl.Size = new System.Drawing.Size(350, 450);
             this.tabControl.TabIndex = 5;
-            // 
-            // tabMain
-            // 
-            this.tabMain.Location = new System.Drawing.Point(4, 22);
-            this.tabMain.Name = "tabMain";
-            this.tabMain.Padding = new System.Windows.Forms.Padding(3);
-            this.tabMain.Size = new System.Drawing.Size(342, 424);
-            this.tabMain.TabIndex = 0;
-            this.tabMain.Text = "Main";
-            this.tabMain.UseVisualStyleBackColor = true;
             // 
             // tabNewUser
             // 
@@ -430,12 +424,12 @@
             // 
             // tabDelete
             // 
+            this.tabDelete.Controls.Add(this.txtEliminarRol);
             this.tabDelete.Controls.Add(this.btnDelCancel);
             this.tabDelete.Controls.Add(this.btnDeleteUser);
             this.tabDelete.Controls.Add(this.label2);
             this.tabDelete.Controls.Add(this.txtDelId);
             this.tabDelete.Controls.Add(this.label3);
-            this.tabDelete.Controls.Add(this.cmbDelRol);
             this.tabDelete.Controls.Add(this.txtDelFullname);
             this.tabDelete.Controls.Add(this.label4);
             this.tabDelete.Controls.Add(this.label5);
@@ -496,16 +490,9 @@
             this.label3.TabIndex = 45;
             this.label3.Text = "Eliminar Usuario";
             // 
-            // cmbDelRol
-            // 
-            this.cmbDelRol.FormattingEnabled = true;
-            this.cmbDelRol.Location = new System.Drawing.Point(157, 235);
-            this.cmbDelRol.Name = "cmbDelRol";
-            this.cmbDelRol.Size = new System.Drawing.Size(130, 21);
-            this.cmbDelRol.TabIndex = 48;
-            // 
             // txtDelFullname
             // 
+            this.txtDelFullname.Enabled = false;
             this.txtDelFullname.Location = new System.Drawing.Point(157, 191);
             this.txtDelFullname.Name = "txtDelFullname";
             this.txtDelFullname.Size = new System.Drawing.Size(130, 20);
@@ -550,6 +537,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
+            this.label6.BackColor = System.Drawing.Color.Transparent;
             this.label6.Font = new System.Drawing.Font("Verdana", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.Location = new System.Drawing.Point(297, 31);
             this.label6.Margin = new System.Windows.Forms.Padding(10);
@@ -570,17 +558,61 @@
             this.btnVolverAtras.UseVisualStyleBackColor = false;
             this.btnVolverAtras.Click += new System.EventHandler(this.btnVolverAtras_Click);
             // 
+            // gpbOperador
+            // 
+            this.gpbOperador.AutoSize = true;
+            this.gpbOperador.BackColor = System.Drawing.Color.Transparent;
+            this.gpbOperador.Controls.Add(this.lblNuevoOperador);
+            this.gpbOperador.Controls.Add(this.lblOperador);
+            this.gpbOperador.Location = new System.Drawing.Point(848, 31);
+            this.gpbOperador.Name = "gpbOperador";
+            this.gpbOperador.Size = new System.Drawing.Size(147, 52);
+            this.gpbOperador.TabIndex = 51;
+            this.gpbOperador.TabStop = false;
+            // 
+            // lblNuevoOperador
+            // 
+            this.lblNuevoOperador.AutoSize = true;
+            this.lblNuevoOperador.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNuevoOperador.Location = new System.Drawing.Point(6, 20);
+            this.lblNuevoOperador.Name = "lblNuevoOperador";
+            this.lblNuevoOperador.Size = new System.Drawing.Size(78, 16);
+            this.lblNuevoOperador.TabIndex = 42;
+            this.lblNuevoOperador.Text = "Operador:";
+            // 
+            // lblOperador
+            // 
+            this.lblOperador.AutoSize = true;
+            this.lblOperador.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblOperador.Location = new System.Drawing.Point(87, 20);
+            this.lblOperador.Name = "lblOperador";
+            this.lblOperador.Size = new System.Drawing.Size(0, 16);
+            this.lblOperador.TabIndex = 49;
+            // 
+            // txtEliminarRol
+            // 
+            this.txtEliminarRol.Enabled = false;
+            this.txtEliminarRol.Location = new System.Drawing.Point(157, 235);
+            this.txtEliminarRol.Name = "txtEliminarRol";
+            this.txtEliminarRol.Size = new System.Drawing.Size(130, 20);
+            this.txtEliminarRol.TabIndex = 59;
+            // 
             // frmGestionUsuario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = global::Vistas.Properties.Resources.background_2344222_640;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1140, 661);
+            this.ControlBox = false;
+            this.Controls.Add(this.gpbOperador);
             this.Controls.Add(this.btnVolverAtras);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.tabControl);
             this.Controls.Add(this.txtPatternSearch);
             this.Controls.Add(this.btnSearch);
             this.Controls.Add(this.dgwUsuarios);
+            this.DoubleBuffered = true;
             this.Name = "frmGestionUsuario";
             this.Text = "Gestión de Usuarios";
             this.Load += new System.EventHandler(this.frmGestionUsuario_Load);
@@ -592,6 +624,8 @@
             this.tabModificar.PerformLayout();
             this.tabDelete.ResumeLayout(false);
             this.tabDelete.PerformLayout();
+            this.gpbOperador.ResumeLayout(false);
+            this.gpbOperador.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -603,7 +637,6 @@
         private System.Windows.Forms.Button btnSearch;
         private System.Windows.Forms.TextBox txtPatternSearch;
         private System.Windows.Forms.TabControl tabControl;
-        private System.Windows.Forms.TabPage tabMain;
         private System.Windows.Forms.TabPage tabNewUser;
         private System.Windows.Forms.TabPage tabModificar;
         private System.Windows.Forms.Button btnAddSaveUser;
@@ -640,7 +673,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txtDelId;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.ComboBox cmbDelRol;
         private System.Windows.Forms.TextBox txtDelFullname;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
@@ -648,5 +680,9 @@
         private System.Windows.Forms.Label label20;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Button btnVolverAtras;
+        private System.Windows.Forms.GroupBox gpbOperador;
+        private System.Windows.Forms.Label lblNuevoOperador;
+        private System.Windows.Forms.Label lblOperador;
+        private System.Windows.Forms.TextBox txtEliminarRol;
     }
 }

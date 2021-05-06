@@ -33,6 +33,7 @@ namespace Vistas {
         private void frmGestionUsuario_Load(object sender, EventArgs e) {
             cargarComboRoles();
             cargarUsuarios();
+            lblOperador.Text = UserLogin.usuLog_FullName;
         }
 
         private void cargarUsuarios() {
@@ -60,7 +61,7 @@ namespace Vistas {
                 txtModFullname.Text = dgwUsuarios.CurrentRow.Cells["Apellido y nombre"].Value.ToString();
 
                 //Panel delete
-                cmbDelRol.SelectedValue = dgwUsuarios.CurrentRow.Cells["ID Rol"].Value.ToString();
+                txtEliminarRol.Text = dgwUsuarios.CurrentRow.Cells["Rol"].Value.ToString();
                 txtDelId.Text = dgwUsuarios.CurrentRow.Cells["ID"].Value.ToString();
                 txtDelUsername.Text = dgwUsuarios.CurrentRow.Cells["Username"].Value.ToString();
                 txtDelFullname.Text = dgwUsuarios.CurrentRow.Cells["Apellido y nombre"].Value.ToString();
@@ -137,17 +138,17 @@ namespace Vistas {
 
         private void btnAddCancel_Click(object sender, EventArgs e) {
             cleanTextBox(tabNewUser);
-            tabControl.SelectedTab = tabControl.TabPages["tabMain"];
+            
         }
 
         private void btnDelCancel_Click(object sender, EventArgs e) {
             cleanTextBox(tabDelete);
-            tabControl.SelectedTab = tabControl.TabPages["tabMain"];
+            
         }
 
         private void btnModCancel_Click(object sender, EventArgs e) {
             cleanTextBox(tabModificar);
-            tabControl.SelectedTab = tabControl.TabPages["tabMain"];
+            
         }
 
         /*

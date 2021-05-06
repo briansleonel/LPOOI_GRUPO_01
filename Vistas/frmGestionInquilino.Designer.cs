@@ -467,6 +467,7 @@
             // lblGestionInquilinos
             // 
             this.lblGestionInquilinos.AutoSize = true;
+            this.lblGestionInquilinos.BackColor = System.Drawing.Color.Transparent;
             this.lblGestionInquilinos.Font = new System.Drawing.Font("Verdana", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblGestionInquilinos.Location = new System.Drawing.Point(297, 31);
             this.lblGestionInquilinos.Margin = new System.Windows.Forms.Padding(10);
@@ -490,6 +491,7 @@
             // lblBuscar
             // 
             this.lblBuscar.AutoSize = true;
+            this.lblBuscar.BackColor = System.Drawing.Color.Transparent;
             this.lblBuscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblBuscar.Location = new System.Drawing.Point(12, 148);
             this.lblBuscar.Name = "lblBuscar";
@@ -501,6 +503,7 @@
             // gpbOperador
             // 
             this.gpbOperador.AutoSize = true;
+            this.gpbOperador.BackColor = System.Drawing.Color.Transparent;
             this.gpbOperador.Controls.Add(this.lblNuevoOperador);
             this.gpbOperador.Controls.Add(this.lblOperador);
             this.gpbOperador.Location = new System.Drawing.Point(833, 31);
@@ -532,6 +535,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = global::Vistas.Properties.Resources.background_2344222_640;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1140, 661);
             this.ControlBox = false;
             this.Controls.Add(this.gpbOperador);
@@ -542,6 +547,7 @@
             this.Controls.Add(this.txtPatternSearch);
             this.Controls.Add(this.btnSearch);
             this.Controls.Add(this.dgwInquilinos);
+            this.DoubleBuffered = true;
             this.Name = "frmGestionInquilino";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Gestión de Usuarios";
