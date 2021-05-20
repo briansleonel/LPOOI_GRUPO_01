@@ -34,6 +34,8 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="Microsoft.VisualBasic.PowerPacks.Vs, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -51,6 +53,18 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>agenciaDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="FrmGestionEdificio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmGestionEdificio.Designer.cs">
+      <DependentUpon>FrmGestionEdificio.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmGestionDepartamento.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmGestionDepartamento.Designer.cs">
+      <DependentUpon>FrmGestionDepartamento.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmGestionAlquiler.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -63,47 +77,11 @@
     <Compile Include="frmGestionInquilino.Designer.cs">
       <DependentUpon>frmGestionInquilino.cs</DependentUpon>
     </Compile>
-    <Compile Include="FrmAltaDepartamento.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FrmAltaDepartamento.Designer.cs">
-      <DependentUpon>FrmAltaDepartamento.cs</DependentUpon>
-    </Compile>
-    <Compile Include="FrmAltaEdificio.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FrmAltaEdificio.Designer.cs">
-      <DependentUpon>FrmAltaEdificio.cs</DependentUpon>
-    </Compile>
-    <Compile Include="FrmAltaInquilino.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FrmAltaInquilino.Designer.cs">
-      <DependentUpon>FrmAltaInquilino.cs</DependentUpon>
-    </Compile>
-    <Compile Include="frmAltaUsuario.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmAltaUsuario.Designer.cs">
-      <DependentUpon>frmAltaUsuario.cs</DependentUpon>
-    </Compile>
-    <Compile Include="frmBienvenida.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmBienvenida.Designer.cs">
-      <DependentUpon>frmBienvenida.cs</DependentUpon>
-    </Compile>
     <Compile Include="FrmLogin.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FrmLogin.Designer.cs">
       <DependentUpon>FrmLogin.cs</DependentUpon>
-    </Compile>
-    <Compile Include="FrmMain.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FrmMain.Designer.cs">
-      <DependentUpon>FrmMain.cs</DependentUpon>
     </Compile>
     <Compile Include="frmGestionUsuario.cs">
       <SubType>Form</SubType>
@@ -119,32 +97,20 @@
     <Compile Include="FrmPrincipal.Designer.cs">
       <DependentUpon>FrmPrincipal.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="FrmGestionEdificio.resx">
+      <DependentUpon>FrmGestionEdificio.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmGestionDepartamento.resx">
+      <DependentUpon>FrmGestionDepartamento.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmGestionAlquiler.resx">
       <DependentUpon>frmGestionAlquiler.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmGestionInquilino.resx">
       <DependentUpon>frmGestionInquilino.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FrmAltaDepartamento.resx">
-      <DependentUpon>FrmAltaDepartamento.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FrmAltaEdificio.resx">
-      <DependentUpon>FrmAltaEdificio.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FrmAltaInquilino.resx">
-      <DependentUpon>FrmAltaInquilino.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="frmAltaUsuario.resx">
-      <DependentUpon>frmAltaUsuario.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="frmBienvenida.resx">
-      <DependentUpon>frmBienvenida.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="FrmLogin.resx">
       <DependentUpon>FrmLogin.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FrmMain.resx">
-      <DependentUpon>FrmMain.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmGestionUsuario.resx">
       <DependentUpon>frmGestionUsuario.cs</DependentUpon>
@@ -198,6 +164,78 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\background-2344222_640.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\gestion-comercial-Logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\gestion-comercial-Logo1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\avatardefault_92824.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\key_117936.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\window_close_icon_135015.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\window_minimize_icon_138009.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\window_maximize_icon_144029.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\window_restore_icon_144027.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user_person_Usuario_6100.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user_Inquilino_15362.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Departamento-06_24511.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\3986724-appartment-plan-Edificio_112968.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\real-setate-house-home-apartment-Alquiler_108588.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Usuario.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Usuarios.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\casaAmarilla.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\edificio.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\contratoRosado.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cerrar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\minimazar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\res.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\maxi.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\casa_blanca_y_roja_ilustracion3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CasaPrincipal.gif" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

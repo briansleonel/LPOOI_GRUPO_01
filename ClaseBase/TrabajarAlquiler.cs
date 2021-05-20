@@ -24,8 +24,6 @@ namespace ClaseBase
             cmd.CommandType = CommandType.Text;
             cmd.Connection = cnn;
 
-
-
             // Ejecuta la consulta
             SqlDataAdapter da = new SqlDataAdapter(cmd);
 
@@ -44,15 +42,15 @@ namespace ClaseBase
             SqlCommand cmd = new SqlCommand();
             cmd = cnn.CreateCommand();
             cmd.CommandText = "SELECT ";
-            cmd.CommandText += " alq_codigo as 'ID Alquiler', E.edif_codigo 'Edificio Codigo' , edif_nombre 'Nombre Edificio', a.dpto_codigo 'Depto Codigo' , dpto_numero 'Depto Numero',";
-            cmd.CommandText += " dpto_piso 'Depto Piso' , A.inq_codigo 'Codigo Inquilino' ,inq_Apellido as  'Apellido Inquilino' , inq_Nombre as  'Nombre Inquilino', alq_fecha as 'Fecha Contrato',";
-            cmd.CommandText += " alq_fechaDesde as 'Fecha de Inicio', alq_fechaHasta as 'Fecha de Final', alq_precio as 'Precio'";
+            cmd.CommandText += " alq_codigo as 'ID Alquiler', E.edif_codigo 'Edificio Codigo' , edif_nombre 'Nombre Edificio', edif_direccion 'Direccion', a.dpto_codigo 'Depto Codigo' , dpto_numero 'Depto Numero',";
+            cmd.CommandText += " dpto_piso 'Depto Piso' , A.inq_codigo 'Codigo Inquilino' ,inq_Apellido as  'Apellido Inquilino' , inq_Nombre as  'Nombre Inquilino', inq_telefono as  'Telefono', alq_fecha as 'Fecha Contrato',";
+            cmd.CommandText += " alq_fechaDesde as 'Fecha de Inicio', alq_fechaHasta as 'Fecha de Final', alq_precio as 'Precio', tipoDpto_descripcion as 'Tipo'";
             cmd.CommandText += " FROM Alquiler as A LEFT OUTER JOIN Inquilino as I ON (I.inq_codigo = A.inq_codigo)";
             cmd.CommandText += "LEFT OUTER JOIN Departamento as D ON (D.dpto_codigo = A.dpto_codigo)";
             cmd.CommandText += "LEFT OUTER JOIN Edificio as E ON (D.edif_codigo = E.edif_codigo)";
+            cmd.CommandText += "LEFT OUTER JOIN TipoDepartamento as T ON (D.tipoDpto_codigo = T.tipoDpto_codigo)";
             cmd.CommandType = CommandType.Text;
             cmd.Connection = cnn;
-
 
 
             // Ejecuta la consulta
@@ -87,7 +85,7 @@ namespace ClaseBase
             conexion.Close();
         }
 
-         public static void updateInquilino(Alquiler alq)
+         public static void updateAlquiler(Alquiler alq)
          {
              SqlConnection conexion = new SqlConnection(ClaseBase.Properties.Settings.Default.agenciaConnectionString);
 
@@ -132,5 +130,30 @@ namespace ClaseBase
              conexion.Close();
 
          }
+
+         public static DataTable filtrarAlquileresPorSP(int var1, int var2, int var3, string nombreEdificio, DateTime fechaInicio, DateTime fechaFinal, string tipoDepartamento)
+         {
+             SqlConnection conexion = new SqlConnection(ClaseBase.Properties.Settings.Default.agenciaConnectionString);
+
+             SqlCommand cmd = new SqlCommand();
+             cmd.CommandText = "OrdenarAlquileresPor";
+             cmd.CommandType = CommandType.StoredProcedure;
+             cmd.Connection = conexion;
+             cmd.Parameters.AddWithValue("@var1", var1);
+             cmd.Parameters.AddWithValue("@var2", var2);
+             cmd.Parameters.AddWithValue("@var3", var3);
+             cmd.Parameters.AddWithValue("@edificio", nombreEdificio);
+             cmd.Parameters.AddWithValue("@inicio", fechaInicio);
+             cmd.Parameters.AddWithValue("@final", fechaFinal);
+             cmd.Parameters.AddWithValue("@tipodepartamento", tipoDepartamento);
+
+             SqlDataAdapter da = new SqlDataAdapter(cmd);
+
+             DataTable dt = new DataTable();
+             da.Fill(dt);
+
+             return dt;
+         }
+        
     }
 }

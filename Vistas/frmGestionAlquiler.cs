@@ -5,6 +5,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Runtime.InteropServices;
 using System.Windows.Forms;
 
 using ClaseBase;
@@ -15,6 +16,18 @@ namespace Vistas {
             InitializeComponent();
         }
 
+        int var1 = 0, var2 = 0 , var3 = 0;
+
+        private void cargarComboFiltroTipoDepartamentoAndEdificio()
+        {
+            cmbFiltroTipoDepartamento.DisplayMember = "tipoDpto_descripcion";
+            cmbFiltroTipoDepartamento.ValueMember = "tipoDpto_codigo";
+            cmbFiltroTipoDepartamento.DataSource = TrabajarTipoDepartamento.listarTipoDepartamento();
+
+            cmbFiltroEdificio.DisplayMember = "edif_nombre";
+            cmbFiltroEdificio.ValueMember = "edif_codigo";
+            cmbFiltroEdificio.DataSource = TrabajarEdificio.listarEdificio();
+        }
 
         private void cargarComboEdificios() {
             cmbAddEdificio.DisplayMember = "edif_nombre";
@@ -88,6 +101,7 @@ namespace Vistas {
             cargarAlquileres();
             cargarComboInquilinos();
             lblOperador.Text = UserLogin.usuLog_FullName;
+            cargarComboFiltroTipoDepartamentoAndEdificio();
             
         }
 
@@ -107,12 +121,7 @@ namespace Vistas {
 
 
         private void btnSearch_Click(object sender, EventArgs e) {
-            if (txtPatternSearch.Text != "")
-                dgwAlquileres.DataSource = TrabajarUsuario.buscarUsuarios(txtPatternSearch.Text);
-            else {
-                MessageBox.Show("Debe ingresar un patrón de búsqueda", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                cargarAlquileres();
-            }
+            cargarAlquileres();
         }
 
         private void dgwAlquileres_CurrentCellChanged(object sender, EventArgs e) {
@@ -122,7 +131,7 @@ namespace Vistas {
 
                 txtModId.Text = dgwAlquileres.CurrentRow.Cells["ID Alquiler"].Value.ToString();
                 txtModPrecio.Text = dgwAlquileres.CurrentRow.Cells["Precio"].Value.ToString();
-
+                txtModFechaContrato.Text = Convert.ToDateTime(dgwAlquileres.CurrentRow.Cells["Fecha Contrato"].Value).ToShortDateString();
                 cmbModEdificio.SelectedValue = dgwAlquileres.CurrentRow.Cells["Edificio Codigo"].Value.ToString();
                 cmbModDepartamento.SelectedValue = dgwAlquileres.CurrentRow.Cells["Depto Codigo"].Value.ToString();
                 cmbModInquilino.SelectedValue = dgwAlquileres.CurrentRow.Cells["Codigo Inquilino"].Value.ToString();
@@ -149,8 +158,9 @@ namespace Vistas {
          * --------------------- BUTTONS GUARDAR -----------------------------
          */
 
-        private void btnAddSaveInquilino_Click(object sender, EventArgs e) {
-            if (validarTextBoxAddUser()) {
+        private void btnAddSaveAlquiler_Click(object sender, EventArgs e) {
+            if (validarFecha())
+            {
                     DialogResult rta = MessageBox.Show("¿Desea agregar el Alquiler?", "", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
                     if (rta == DialogResult.Yes) {
                         Alquiler oAlquiler = new Alquiler();
@@ -169,6 +179,7 @@ namespace Vistas {
             }
         }
 
+        
         private void btnModSave_Click(object sender, EventArgs e) {
            if (validarTextBoxModificarUser()) {
 
@@ -178,16 +189,16 @@ namespace Vistas {
                    Alquiler oAlquilerMod = new Alquiler();
 
                    oAlquilerMod.Alq_Codigo = Convert.ToInt32(txtModId.Text);
-                   oAlquilerMod.Alq_Fecha = Convert.ToDateTime(DateTime.Now.ToLongDateString());
+                   oAlquilerMod.Alq_Fecha = Convert.ToDateTime(txtModFechaContrato.Text);
                    oAlquilerMod.Dpto_Codigo = (int)cmbModDepartamento.SelectedValue;
                    oAlquilerMod.Inq_Codigo = (int)cmbModInquilino.SelectedValue;
                    oAlquilerMod.Alq_FechaDesde = Convert.ToDateTime(dtpModFechaInicio.Value);
                    oAlquilerMod.Alq_FechaHasta = Convert.ToDateTime(dtpModFechaFinal.Value);
                    oAlquilerMod.Alq_Precio = Convert.ToDecimal(txtModPrecio.Text);
 
-                   TrabajarAlquiler.updateInquilino(oAlquilerMod);
+                   TrabajarAlquiler.updateAlquiler(oAlquilerMod);
 
-                   MessageBox.Show("Se actualizaron los datos del usuario ID: ", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                   MessageBox.Show("Se actualizaron los datos correctamente ", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
                    ValidarUtil.cleanTextBox(tabModificar);
                    cargarAlquileres();
                }
@@ -213,44 +224,52 @@ namespace Vistas {
          */
 
         private void btnAddCancel_Click(object sender, EventArgs e) {
-            ValidarUtil.cleanTextBox(tabNewUser);
+            //ValidarUtil.cleanTextBox(tabNewUser);
             
         }
 
         private void btnDelCancel_Click(object sender, EventArgs e) {
-            ValidarUtil.cleanTextBox(tabDelete);
+            //alidarUtil.cleanTextBox(tabDelete);
             
         }
 
         private void btnModCancel_Click(object sender, EventArgs e) {
-            ValidarUtil.cleanTextBox(tabModificar);
+            //ValidarUtil.cleanTextBox(tabModificar);
             
         }
 
         /*
          * ------------------- VALIDACIONES DE CAMPOS -----------------------
          */
-        private bool validarTextBoxAddUser()
+        private bool validarFecha()
         {
-            if (txtNuevoPrecio.Text == "")
+            if (dtpNuevoFechaFinal.Value.Date < dtpNuevoFechaInicio.Value.Date)
             {
-                MessageBox.Show("Debe ingresar el Precio", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("La fecha Final debe ser mayor a la fecha de Inicio: " + dtpNuevoFechaFinal.Value, "", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             else
             {
-                return true;
-            }
+                if (dtpNuevoFechaInicio.Value.Date < Convert.ToDateTime(DateTime.Now.ToLongDateString()))
+                {
+                    MessageBox.Show("La fecha Inico debe ser mayor o igual a la fecha de Hoy!!!", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                else
+                {
+                    return true;
+                }
+                }
             return false;
         }
 
         private bool validarTextBoxModificarUser() {
-            if (txtModPrecio.Text == "")
+
+            if (dtpModFechaFinal.Value.Date < dtpModFechaInicio.Value.Date)
             {
-                MessageBox.Show("Debe ingresar el Precio", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("La fecha Final debe ser mayor a la fecha de Inicio: " + dtpNuevoFechaFinal.Value, "", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             else
             {
-                return true;
+                  return true;
             }
             return false;
         }
@@ -259,9 +278,9 @@ namespace Vistas {
 
         private void btnVolverAtras_Click(object sender, EventArgs e) {
             this.Close();
-            FrmPrincipal inicio = new FrmPrincipal();
+            //FrmPrincipal inicio = new FrmPrincipal();
             //FrmMain inicio = new FrmMain();
-            inicio.Show();
+            // inicio.Show();
             
         }
 
@@ -324,6 +343,113 @@ namespace Vistas {
         private void txtNuevoPrecio_KeyPress(object sender, KeyPressEventArgs e)
         {
             ValidarUtil.NumerosDecimales(e);
+        }
+
+        private void chkEdificio_CheckedChanged(object sender, EventArgs e)
+        {
+            if (cmbFiltroEdificio.Enabled == false)
+            {
+                cmbFiltroEdificio.Enabled = true;
+                var1 = 1;
+                btnfiltroactivar();
+            }
+            else
+            {
+                cmbFiltroEdificio.Enabled = false;
+                var1 = 0;
+                btnfiltroactivar();
+            }
+        }
+
+        private void chkFecha_CheckedChanged(object sender, EventArgs e)
+        {
+            if (pnlFiltroFechas.Enabled == false)
+            {
+                pnlFiltroFechas.Enabled = true;
+                var2 = 1;
+                btnfiltroactivar();
+            }
+            else
+            {
+                pnlFiltroFechas.Enabled = false;
+                var2 = 0;
+                btnfiltroactivar();
+            }
+        }
+
+        private void chkTipoDepartamento_CheckedChanged(object sender, EventArgs e)
+        {
+            if (cmbFiltroTipoDepartamento.Enabled == false)
+            {
+                cmbFiltroTipoDepartamento.Enabled = true;
+                var3 = 1;
+                btnfiltroactivar();
+            }
+            else
+            {
+                cmbFiltroTipoDepartamento.Enabled = false;
+                var3 = 0;
+                btnfiltroactivar();
+            }
+        }
+
+        private void btnFiltro_Click(object sender, EventArgs e)
+        {
+            if (dtpFiltroFechaInicio.Value.Date > dtpFiltroFechaFinal.Value.Date)
+            {
+                MessageBox.Show("La fecha Final debe ser mayor a la fecha de Inicio: ", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                dtpFiltroFechaFinal.ResetText();
+            }
+            else
+            {
+                dgwAlquileres.DataSource = TrabajarAlquiler.filtrarAlquileresPorSP(var1, var2, var3, cmbFiltroEdificio.Text, Convert.ToDateTime(dtpFiltroFechaInicio.Value.ToShortDateString()), Convert.ToDateTime(dtpFiltroFechaFinal.Value.ToShortDateString()), cmbFiltroTipoDepartamento.Text);
+            }
+        }
+
+        private void btnfiltroactivar() {
+            if ((var1 == 0) && (var2 == 0) && (var3 == 0))
+            {
+                btnFiltro.Enabled = false;
+            }
+            else {
+                btnFiltro.Enabled = true;
+            }
+
+        }
+
+        [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
+        private extern static void ReleaseCapture();
+        [DllImport("user32.DLL", EntryPoint = "SendMessage")]
+        private extern static void SendMessage(System.IntPtr hWnd, int wMsg, int wParam, int lParam);
+
+        private void Mover_MouseDown(object sender, MouseEventArgs e)
+        {
+            ReleaseCapture();
+            SendMessage(this.Handle, 0x112, 0xf012, 0);
+        }
+
+        private void pctGestionAlquilerCerrar_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void pctGestionAlquilerMinimizar_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+        }
+
+        private void pctGestionAlquilerRestaurar_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Normal;
+            pctGestionAlquilerRestaurar.Visible = false;
+            pctGestionAlquilermaximizar.Visible = true;
+        }
+
+        private void pctGestionAlquilermaximizar_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Maximized;
+            pctGestionAlquilerRestaurar.Visible = true;
+            pctGestionAlquilermaximizar.Visible = false;
         }
 
     }

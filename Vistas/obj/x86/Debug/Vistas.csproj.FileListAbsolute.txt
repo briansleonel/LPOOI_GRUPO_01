@@ -88,13 +88,7 @@ C:\Users\MARCGI\Downloads\LPOO01_GRUPO_01 Funcional\LPOOI_GRUPO_01\Vistas\bin\De
 C:\Users\MARCGI\Downloads\LPOO01_GRUPO_01 Funcional\LPOOI_GRUPO_01\Vistas\obj\x86\Debug\Vistas.csprojResolveAssemblyReference.cache
 C:\Users\MARCGI\Downloads\LPOO01_GRUPO_01 Funcional\LPOOI_GRUPO_01\Vistas\obj\x86\Debug\Vistas.frmGestionAlquiler.resources
 C:\Users\MARCGI\Downloads\LPOO01_GRUPO_01 Funcional\LPOOI_GRUPO_01\Vistas\obj\x86\Debug\Vistas.frmGestionInquilino.resources
-C:\Users\MARCGI\Downloads\LPOO01_GRUPO_01 Funcional\LPOOI_GRUPO_01\Vistas\obj\x86\Debug\Vistas.FrmAltaDepartamento.resources
-C:\Users\MARCGI\Downloads\LPOO01_GRUPO_01 Funcional\LPOOI_GRUPO_01\Vistas\obj\x86\Debug\Vistas.FrmAltaEdificio.resources
-C:\Users\MARCGI\Downloads\LPOO01_GRUPO_01 Funcional\LPOOI_GRUPO_01\Vistas\obj\x86\Debug\Vistas.FrmAltaInquilino.resources
-C:\Users\MARCGI\Downloads\LPOO01_GRUPO_01 Funcional\LPOOI_GRUPO_01\Vistas\obj\x86\Debug\Vistas.frmAltaUsuario.resources
-C:\Users\MARCGI\Downloads\LPOO01_GRUPO_01 Funcional\LPOOI_GRUPO_01\Vistas\obj\x86\Debug\Vistas.frmBienvenida.resources
 C:\Users\MARCGI\Downloads\LPOO01_GRUPO_01 Funcional\LPOOI_GRUPO_01\Vistas\obj\x86\Debug\Vistas.FrmLogin.resources
-C:\Users\MARCGI\Downloads\LPOO01_GRUPO_01 Funcional\LPOOI_GRUPO_01\Vistas\obj\x86\Debug\Vistas.FrmMain.resources
 C:\Users\MARCGI\Downloads\LPOO01_GRUPO_01 Funcional\LPOOI_GRUPO_01\Vistas\obj\x86\Debug\Vistas.frmGestionUsuario.resources
 C:\Users\MARCGI\Downloads\LPOO01_GRUPO_01 Funcional\LPOOI_GRUPO_01\Vistas\obj\x86\Debug\Vistas.Properties.Resources.resources
 C:\Users\MARCGI\Downloads\LPOO01_GRUPO_01 Funcional\LPOOI_GRUPO_01\Vistas\obj\x86\Debug\Vistas.csproj.GenerateResource.Cache
@@ -120,3 +114,68 @@ C:\Users\MARCGI\Documents\git at\Vistas\obj\x86\Debug\Vistas.frmGestionUsuario.r
 C:\Users\MARCGI\Documents\git at\Vistas\obj\x86\Debug\Vistas.Properties.Resources.resources
 C:\Users\MARCGI\Documents\git at\Vistas\obj\x86\Debug\Vistas.FrmPrincipal.resources
 C:\Users\MARCGI\Documents\git at\Vistas\obj\x86\Debug\Vistas.csproj.GenerateResource.Cache
+C:\Users\MARCGI\Downloads\LPOO01_GRUPO_01 Funcional\LPOOI_GRUPO_01\Vistas\obj\x86\Debug\Vistas.FrmGestionDepartamento.resources
+C:\Users\MasterZhord\Documents\LPOO2021\tp3\LPOOI_GRUPO_01-TP3Presentado\LPOOI_GRUPO_01\Vistas\bin\Debug\Vistas.exe.config
+C:\Users\MasterZhord\Documents\LPOO2021\tp3\LPOOI_GRUPO_01-TP3Presentado\LPOOI_GRUPO_01\Vistas\obj\x86\Debug\Vistas.exe
+C:\Users\MasterZhord\Documents\LPOO2021\tp3\LPOOI_GRUPO_01-TP3Presentado\LPOOI_GRUPO_01\Vistas\obj\x86\Debug\Vistas.pdb
+C:\Users\MasterZhord\Documents\LPOO2021\tp3\LPOOI_GRUPO_01-TP3Presentado\LPOOI_GRUPO_01\Vistas\bin\Debug\Vistas.exe
+C:\Users\MasterZhord\Documents\LPOO2021\tp3\LPOOI_GRUPO_01-TP3Presentado\LPOOI_GRUPO_01\Vistas\bin\Debug\Vistas.pdb
+C:\Users\MasterZhord\Documents\LPOO2021\tp3\LPOOI_GRUPO_01-TP3Presentado\LPOOI_GRUPO_01\Vistas\bin\Debug\ClaseBase.dll
+C:\Users\MasterZhord\Documents\LPOO2021\tp3\LPOOI_GRUPO_01-TP3Presentado\LPOOI_GRUPO_01\Vistas\bin\Debug\ClaseBase.pdb
+C:\Users\MasterZhord\Documents\LPOO2021\tp3\LPOOI_GRUPO_01-TP3Presentado\LPOOI_GRUPO_01\Vistas\obj\x86\Debug\Vistas.csprojResolveAssemblyReference.cache
+C:\Users\MasterZhord\Documents\LPOO2021\tp3\LPOOI_GRUPO_01-TP3Presentado\LPOOI_GRUPO_01\Vistas\obj\x86\Debug\Vistas.FrmGestionDepartamento.resources
+C:\Users\MasterZhord\Documents\LPOO2021\tp3\LPOOI_GRUPO_01-TP3Presentado\LPOOI_GRUPO_01\Vistas\obj\x86\Debug\Vistas.frmGestionAlquiler.resources
+C:\Users\MasterZhord\Documents\LPOO2021\tp3\LPOOI_GRUPO_01-TP3Presentado\LPOOI_GRUPO_01\Vistas\obj\x86\Debug\Vistas.frmGestionInquilino.resources
+C:\Users\MasterZhord\Documents\LPOO2021\tp3\LPOOI_GRUPO_01-TP3Presentado\LPOOI_GRUPO_01\Vistas\obj\x86\Debug\Vistas.FrmAltaDepartamento.resources
+C:\Users\MasterZhord\Documents\LPOO2021\tp3\LPOOI_GRUPO_01-TP3Presentado\LPOOI_GRUPO_01\Vistas\obj\x86\Debug\Vistas.FrmAltaEdificio.resources
+C:\Users\MasterZhord\Documents\LPOO2021\tp3\LPOOI_GRUPO_01-TP3Presentado\LPOOI_GRUPO_01\Vistas\obj\x86\Debug\Vistas.FrmAltaInquilino.resources
+C:\Users\MasterZhord\Documents\LPOO2021\tp3\LPOOI_GRUPO_01-TP3Presentado\LPOOI_GRUPO_01\Vistas\obj\x86\Debug\Vistas.frmAltaUsuario.resources
+C:\Users\MasterZhord\Documents\LPOO2021\tp3\LPOOI_GRUPO_01-TP3Presentado\LPOOI_GRUPO_01\Vistas\obj\x86\Debug\Vistas.frmBienvenida.resources
+C:\Users\MasterZhord\Documents\LPOO2021\tp3\LPOOI_GRUPO_01-TP3Presentado\LPOOI_GRUPO_01\Vistas\obj\x86\Debug\Vistas.FrmLogin.resources
+C:\Users\MasterZhord\Documents\LPOO2021\tp3\LPOOI_GRUPO_01-TP3Presentado\LPOOI_GRUPO_01\Vistas\obj\x86\Debug\Vistas.FrmMain.resources
+C:\Users\MasterZhord\Documents\LPOO2021\tp3\LPOOI_GRUPO_01-TP3Presentado\LPOOI_GRUPO_01\Vistas\obj\x86\Debug\Vistas.frmGestionUsuario.resources
+C:\Users\MasterZhord\Documents\LPOO2021\tp3\LPOOI_GRUPO_01-TP3Presentado\LPOOI_GRUPO_01\Vistas\obj\x86\Debug\Vistas.Properties.Resources.resources
+C:\Users\MasterZhord\Documents\LPOO2021\tp3\LPOOI_GRUPO_01-TP3Presentado\LPOOI_GRUPO_01\Vistas\obj\x86\Debug\Vistas.FrmPrincipal.resources
+C:\Users\MasterZhord\Documents\LPOO2021\tp3\LPOOI_GRUPO_01-TP3Presentado\LPOOI_GRUPO_01\Vistas\obj\x86\Debug\Vistas.csproj.GenerateResource.Cache
+C:\Users\MasterZhord\Documents\LPOO2021\tp3\LPOOI_GRUPO_01-TP3Presentado\LPOOI_GRUPO_01\Vistas\obj\x86\Debug\Vistas.FrmGestionEdificio.resources
+C:\Users\MasterZhord\Documents\LPOO2021\tp3\LPOOI_GRUPO_01-TP3Presentado\LPOOI_GRUPO_01-TP3Presentado\LPOOI_GRUPO_01\Vistas\bin\Debug\Vistas.exe.config
+C:\Users\MasterZhord\Documents\LPOO2021\tp3\LPOOI_GRUPO_01-TP3Presentado\LPOOI_GRUPO_01-TP3Presentado\LPOOI_GRUPO_01\Vistas\obj\x86\Debug\Vistas.exe
+C:\Users\MasterZhord\Documents\LPOO2021\tp3\LPOOI_GRUPO_01-TP3Presentado\LPOOI_GRUPO_01-TP3Presentado\LPOOI_GRUPO_01\Vistas\obj\x86\Debug\Vistas.pdb
+C:\Users\MasterZhord\Documents\LPOO2021\tp3\LPOOI_GRUPO_01-TP3Presentado\LPOOI_GRUPO_01-TP3Presentado\LPOOI_GRUPO_01\Vistas\bin\Debug\Vistas.exe
+C:\Users\MasterZhord\Documents\LPOO2021\tp3\LPOOI_GRUPO_01-TP3Presentado\LPOOI_GRUPO_01-TP3Presentado\LPOOI_GRUPO_01\Vistas\bin\Debug\Vistas.pdb
+C:\Users\MasterZhord\Documents\LPOO2021\tp3\LPOOI_GRUPO_01-TP3Presentado\LPOOI_GRUPO_01-TP3Presentado\LPOOI_GRUPO_01\Vistas\bin\Debug\ClaseBase.dll
+C:\Users\MasterZhord\Documents\LPOO2021\tp3\LPOOI_GRUPO_01-TP3Presentado\LPOOI_GRUPO_01-TP3Presentado\LPOOI_GRUPO_01\Vistas\bin\Debug\ClaseBase.pdb
+C:\Users\MasterZhord\Documents\LPOO2021\tp3\LPOOI_GRUPO_01-TP3Presentado\LPOOI_GRUPO_01-TP3Presentado\LPOOI_GRUPO_01\Vistas\obj\x86\Debug\Vistas.csprojResolveAssemblyReference.cache
+C:\Users\MasterZhord\Documents\LPOO2021\tp3\LPOOI_GRUPO_01-TP3Presentado\LPOOI_GRUPO_01-TP3Presentado\LPOOI_GRUPO_01\Vistas\obj\x86\Debug\Vistas.FrmGestionEdificio.resources
+C:\Users\MasterZhord\Documents\LPOO2021\tp3\LPOOI_GRUPO_01-TP3Presentado\LPOOI_GRUPO_01-TP3Presentado\LPOOI_GRUPO_01\Vistas\obj\x86\Debug\Vistas.FrmGestionDepartamento.resources
+C:\Users\MasterZhord\Documents\LPOO2021\tp3\LPOOI_GRUPO_01-TP3Presentado\LPOOI_GRUPO_01-TP3Presentado\LPOOI_GRUPO_01\Vistas\obj\x86\Debug\Vistas.frmGestionAlquiler.resources
+C:\Users\MasterZhord\Documents\LPOO2021\tp3\LPOOI_GRUPO_01-TP3Presentado\LPOOI_GRUPO_01-TP3Presentado\LPOOI_GRUPO_01\Vistas\obj\x86\Debug\Vistas.frmGestionInquilino.resources
+C:\Users\MasterZhord\Documents\LPOO2021\tp3\LPOOI_GRUPO_01-TP3Presentado\LPOOI_GRUPO_01-TP3Presentado\LPOOI_GRUPO_01\Vistas\obj\x86\Debug\Vistas.FrmAltaDepartamento.resources
+C:\Users\MasterZhord\Documents\LPOO2021\tp3\LPOOI_GRUPO_01-TP3Presentado\LPOOI_GRUPO_01-TP3Presentado\LPOOI_GRUPO_01\Vistas\obj\x86\Debug\Vistas.FrmAltaEdificio.resources
+C:\Users\MasterZhord\Documents\LPOO2021\tp3\LPOOI_GRUPO_01-TP3Presentado\LPOOI_GRUPO_01-TP3Presentado\LPOOI_GRUPO_01\Vistas\obj\x86\Debug\Vistas.FrmAltaInquilino.resources
+C:\Users\MasterZhord\Documents\LPOO2021\tp3\LPOOI_GRUPO_01-TP3Presentado\LPOOI_GRUPO_01-TP3Presentado\LPOOI_GRUPO_01\Vistas\obj\x86\Debug\Vistas.frmAltaUsuario.resources
+C:\Users\MasterZhord\Documents\LPOO2021\tp3\LPOOI_GRUPO_01-TP3Presentado\LPOOI_GRUPO_01-TP3Presentado\LPOOI_GRUPO_01\Vistas\obj\x86\Debug\Vistas.frmBienvenida.resources
+C:\Users\MasterZhord\Documents\LPOO2021\tp3\LPOOI_GRUPO_01-TP3Presentado\LPOOI_GRUPO_01-TP3Presentado\LPOOI_GRUPO_01\Vistas\obj\x86\Debug\Vistas.FrmLogin.resources
+C:\Users\MasterZhord\Documents\LPOO2021\tp3\LPOOI_GRUPO_01-TP3Presentado\LPOOI_GRUPO_01-TP3Presentado\LPOOI_GRUPO_01\Vistas\obj\x86\Debug\Vistas.FrmMain.resources
+C:\Users\MasterZhord\Documents\LPOO2021\tp3\LPOOI_GRUPO_01-TP3Presentado\LPOOI_GRUPO_01-TP3Presentado\LPOOI_GRUPO_01\Vistas\obj\x86\Debug\Vistas.frmGestionUsuario.resources
+C:\Users\MasterZhord\Documents\LPOO2021\tp3\LPOOI_GRUPO_01-TP3Presentado\LPOOI_GRUPO_01-TP3Presentado\LPOOI_GRUPO_01\Vistas\obj\x86\Debug\Vistas.Properties.Resources.resources
+C:\Users\MasterZhord\Documents\LPOO2021\tp3\LPOOI_GRUPO_01-TP3Presentado\LPOOI_GRUPO_01-TP3Presentado\LPOOI_GRUPO_01\Vistas\obj\x86\Debug\Vistas.FrmPrincipal.resources
+C:\Users\MasterZhord\Documents\LPOO2021\tp3\LPOOI_GRUPO_01-TP3Presentado\LPOOI_GRUPO_01-TP3Presentado\LPOOI_GRUPO_01\Vistas\obj\x86\Debug\Vistas.csproj.GenerateResource.Cache
+C:\Users\MARCGI\Downloads\LPOO01_GRUPO_01 Funcional\LPOOI_GRUPO_01\Vistas\obj\x86\Debug\Vistas.FrmGestionEdificio.resources
+C:\Users\MasterZhord\Documents\LPOO2021\tp3\LPOOI_GRUPO_01 Actualizar vistas\LPOOI_GRUPO_01\Vistas\bin\Debug\Vistas.exe.config
+C:\Users\MasterZhord\Documents\LPOO2021\tp3\LPOOI_GRUPO_01 Actualizar vistas\LPOOI_GRUPO_01\Vistas\obj\x86\Debug\Vistas.exe
+C:\Users\MasterZhord\Documents\LPOO2021\tp3\LPOOI_GRUPO_01 Actualizar vistas\LPOOI_GRUPO_01\Vistas\obj\x86\Debug\Vistas.pdb
+C:\Users\MasterZhord\Documents\LPOO2021\tp3\LPOOI_GRUPO_01 Actualizar vistas\LPOOI_GRUPO_01\Vistas\bin\Debug\Vistas.exe
+C:\Users\MasterZhord\Documents\LPOO2021\tp3\LPOOI_GRUPO_01 Actualizar vistas\LPOOI_GRUPO_01\Vistas\bin\Debug\Vistas.pdb
+C:\Users\MasterZhord\Documents\LPOO2021\tp3\LPOOI_GRUPO_01 Actualizar vistas\LPOOI_GRUPO_01\Vistas\bin\Debug\ClaseBase.dll
+C:\Users\MasterZhord\Documents\LPOO2021\tp3\LPOOI_GRUPO_01 Actualizar vistas\LPOOI_GRUPO_01\Vistas\bin\Debug\ClaseBase.pdb
+C:\Users\MasterZhord\Documents\LPOO2021\tp3\LPOOI_GRUPO_01 Actualizar vistas\LPOOI_GRUPO_01\Vistas\obj\x86\Debug\Vistas.csprojResolveAssemblyReference.cache
+C:\Users\MasterZhord\Documents\LPOO2021\tp3\LPOOI_GRUPO_01 Actualizar vistas\LPOOI_GRUPO_01\Vistas\obj\x86\Debug\Vistas.FrmGestionEdificio.resources
+C:\Users\MasterZhord\Documents\LPOO2021\tp3\LPOOI_GRUPO_01 Actualizar vistas\LPOOI_GRUPO_01\Vistas\obj\x86\Debug\Vistas.FrmGestionDepartamento.resources
+C:\Users\MasterZhord\Documents\LPOO2021\tp3\LPOOI_GRUPO_01 Actualizar vistas\LPOOI_GRUPO_01\Vistas\obj\x86\Debug\Vistas.frmGestionAlquiler.resources
+C:\Users\MasterZhord\Documents\LPOO2021\tp3\LPOOI_GRUPO_01 Actualizar vistas\LPOOI_GRUPO_01\Vistas\obj\x86\Debug\Vistas.frmGestionInquilino.resources
+C:\Users\MasterZhord\Documents\LPOO2021\tp3\LPOOI_GRUPO_01 Actualizar vistas\LPOOI_GRUPO_01\Vistas\obj\x86\Debug\Vistas.FrmLogin.resources
+C:\Users\MasterZhord\Documents\LPOO2021\tp3\LPOOI_GRUPO_01 Actualizar vistas\LPOOI_GRUPO_01\Vistas\obj\x86\Debug\Vistas.frmGestionUsuario.resources
+C:\Users\MasterZhord\Documents\LPOO2021\tp3\LPOOI_GRUPO_01 Actualizar vistas\LPOOI_GRUPO_01\Vistas\obj\x86\Debug\Vistas.Properties.Resources.resources
+C:\Users\MasterZhord\Documents\LPOO2021\tp3\LPOOI_GRUPO_01 Actualizar vistas\LPOOI_GRUPO_01\Vistas\obj\x86\Debug\Vistas.FrmPrincipal.resources
+C:\Users\MasterZhord\Documents\LPOO2021\tp3\LPOOI_GRUPO_01 Actualizar vistas\LPOOI_GRUPO_01\Vistas\obj\x86\Debug\Vistas.csproj.GenerateResource.Cache

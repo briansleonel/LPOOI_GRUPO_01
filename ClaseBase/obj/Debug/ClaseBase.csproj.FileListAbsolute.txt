@@ -37,3 +37,21 @@ C:\Users\MARCGI\Documents\git at\ClaseBase\bin\Debug\ClaseBase.pdb
 C:\Users\MARCGI\Documents\git at\ClaseBase\obj\Debug\ClaseBase.csprojResolveAssemblyReference.cache
 C:\Users\MARCGI\Documents\git at\ClaseBase\obj\Debug\ClaseBase.dll
 C:\Users\MARCGI\Documents\git at\ClaseBase\obj\Debug\ClaseBase.pdb
+C:\Users\MasterZhord\Documents\LPOO2021\tp3\LPOOI_GRUPO_01-TP3Presentado\LPOOI_GRUPO_01\ClaseBase\bin\Debug\ClaseBase.dll.config
+C:\Users\MasterZhord\Documents\LPOO2021\tp3\LPOOI_GRUPO_01-TP3Presentado\LPOOI_GRUPO_01\ClaseBase\bin\Debug\ClaseBase.dll
+C:\Users\MasterZhord\Documents\LPOO2021\tp3\LPOOI_GRUPO_01-TP3Presentado\LPOOI_GRUPO_01\ClaseBase\bin\Debug\ClaseBase.pdb
+C:\Users\MasterZhord\Documents\LPOO2021\tp3\LPOOI_GRUPO_01-TP3Presentado\LPOOI_GRUPO_01\ClaseBase\obj\Debug\ClaseBase.csprojResolveAssemblyReference.cache
+C:\Users\MasterZhord\Documents\LPOO2021\tp3\LPOOI_GRUPO_01-TP3Presentado\LPOOI_GRUPO_01\ClaseBase\obj\Debug\ClaseBase.dll
+C:\Users\MasterZhord\Documents\LPOO2021\tp3\LPOOI_GRUPO_01-TP3Presentado\LPOOI_GRUPO_01\ClaseBase\obj\Debug\ClaseBase.pdb
+C:\Users\MasterZhord\Documents\LPOO2021\tp3\LPOOI_GRUPO_01-TP3Presentado\LPOOI_GRUPO_01-TP3Presentado\LPOOI_GRUPO_01\ClaseBase\bin\Debug\ClaseBase.dll.config
+C:\Users\MasterZhord\Documents\LPOO2021\tp3\LPOOI_GRUPO_01-TP3Presentado\LPOOI_GRUPO_01-TP3Presentado\LPOOI_GRUPO_01\ClaseBase\bin\Debug\ClaseBase.dll
+C:\Users\MasterZhord\Documents\LPOO2021\tp3\LPOOI_GRUPO_01-TP3Presentado\LPOOI_GRUPO_01-TP3Presentado\LPOOI_GRUPO_01\ClaseBase\bin\Debug\ClaseBase.pdb
+C:\Users\MasterZhord\Documents\LPOO2021\tp3\LPOOI_GRUPO_01-TP3Presentado\LPOOI_GRUPO_01-TP3Presentado\LPOOI_GRUPO_01\ClaseBase\obj\Debug\ClaseBase.csprojResolveAssemblyReference.cache
+C:\Users\MasterZhord\Documents\LPOO2021\tp3\LPOOI_GRUPO_01-TP3Presentado\LPOOI_GRUPO_01-TP3Presentado\LPOOI_GRUPO_01\ClaseBase\obj\Debug\ClaseBase.dll
+C:\Users\MasterZhord\Documents\LPOO2021\tp3\LPOOI_GRUPO_01-TP3Presentado\LPOOI_GRUPO_01-TP3Presentado\LPOOI_GRUPO_01\ClaseBase\obj\Debug\ClaseBase.pdb
+C:\Users\MasterZhord\Documents\LPOO2021\tp3\LPOOI_GRUPO_01 Actualizar vistas\LPOOI_GRUPO_01\ClaseBase\bin\Debug\ClaseBase.dll.config
+C:\Users\MasterZhord\Documents\LPOO2021\tp3\LPOOI_GRUPO_01 Actualizar vistas\LPOOI_GRUPO_01\ClaseBase\bin\Debug\ClaseBase.dll
+C:\Users\MasterZhord\Documents\LPOO2021\tp3\LPOOI_GRUPO_01 Actualizar vistas\LPOOI_GRUPO_01\ClaseBase\bin\Debug\ClaseBase.pdb
+C:\Users\MasterZhord\Documents\LPOO2021\tp3\LPOOI_GRUPO_01 Actualizar vistas\LPOOI_GRUPO_01\ClaseBase\obj\Debug\ClaseBase.csprojResolveAssemblyReference.cache
+C:\Users\MasterZhord\Documents\LPOO2021\tp3\LPOOI_GRUPO_01 Actualizar vistas\LPOOI_GRUPO_01\ClaseBase\obj\Debug\ClaseBase.dll
+C:\Users\MasterZhord\Documents\LPOO2021\tp3\LPOOI_GRUPO_01 Actualizar vistas\LPOOI_GRUPO_01\ClaseBase\obj\Debug\ClaseBase.pdb

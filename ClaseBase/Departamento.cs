@@ -21,9 +21,9 @@ namespace ClaseBase
             get { return edif_Codigo; }
             set { edif_Codigo = value; }
         }
-        private string dpto_Tipo;
+        private int dpto_Tipo;
 
-        public string Dpto_Tipo
+        public int Dpto_Tipo
         {
             get { return dpto_Tipo; }
             set { dpto_Tipo = value; }
@@ -63,9 +63,9 @@ namespace ClaseBase
             get { return dpto_Baños; }
             set { dpto_Baños = value; }
         }
-        private string dpto_Disposicion;
+        private int dpto_Disposicion;
 
-        public string Dpto_Disposicion
+        public int Dpto_Disposicion
         {
             get { return dpto_Disposicion; }
             set { dpto_Disposicion = value; }

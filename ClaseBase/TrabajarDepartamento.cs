@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
+using System.Windows.Forms;
 using System.Data;
 using System.Data.SqlClient;
 
@@ -16,7 +17,7 @@ namespace ClaseBase
             SqlConnection conexion = new SqlConnection(ClaseBase.Properties.Settings.Default.agenciaConnectionString);
 
             SqlCommand cmd = new SqlCommand();
-            cmd.CommandText = "SELECT * FROM departamento";
+            cmd.CommandText = "SELECT * FROM edificioId";
             cmd.CommandType = CommandType.Text;
             cmd.Connection = conexion;
 
@@ -27,7 +28,62 @@ namespace ClaseBase
 
             return dt;
         }
+        
+        public static DataTable listarDepartamentosSP()
+        {
+            SqlConnection conexion = new SqlConnection(ClaseBase.Properties.Settings.Default.agenciaConnectionString);
 
+            SqlCommand cmd = new SqlCommand();
+            cmd.CommandText = "ListaDepartamento";
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Connection = conexion;
+
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+
+            return dt;
+        }
+
+        public static DataTable listarDepartamentosPorSP(int valor)
+        {
+            SqlConnection conexion = new SqlConnection(ClaseBase.Properties.Settings.Default.agenciaConnectionString);
+
+            SqlCommand cmd = new SqlCommand();
+            cmd.CommandText = "OrdenarDepartamentoPor";
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Connection = conexion;
+           
+            cmd.Parameters.AddWithValue("@val", valor);
+            
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+
+            return dt;
+        }
+
+        public static DataTable listarDepartamentosPorEdificcioORDireccionSP(String valor)
+        {
+            SqlConnection conexion = new SqlConnection(ClaseBase.Properties.Settings.Default.agenciaConnectionString);
+
+            SqlCommand cmd = new SqlCommand();
+            cmd.CommandText = "OrdenarDepartamentoPorEdificioOrDireccion";
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Connection = conexion;
+
+            cmd.Parameters.AddWithValue("@dato", valor);
+
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+
+            return dt;
+        }
+        
         public static DataTable buscarDepartamentobyIdEdificio(int id)
         {
             SqlConnection conexion = new SqlConnection(ClaseBase.Properties.Settings.Default.agenciaConnectionString);
@@ -63,6 +119,78 @@ namespace ClaseBase
             return dt;
         }
 
-        
+        public static DataTable NuevoDepartamentoSP(Departamento depa)
+        {
+            SqlConnection conexion = new SqlConnection(ClaseBase.Properties.Settings.Default.agenciaConnectionString);
+
+            SqlCommand cmd = new SqlCommand();
+            cmd.CommandText = "NuevoDepartamento";
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Connection = conexion;
+
+            cmd.Parameters.AddWithValue("@edif_codigo", depa.Edif_Codigo);
+            cmd.Parameters.AddWithValue("@tipoDpto_codigo", depa.Dpto_Tipo);
+            cmd.Parameters.AddWithValue("@numero", depa.Dpto_Numero);
+            cmd.Parameters.AddWithValue("@piso", depa.Dpto_Piso);
+            cmd.Parameters.AddWithValue("@ambiente", depa.Dpto_Ambientes);
+            cmd.Parameters.AddWithValue("@dormitorios", depa.Dpto_Dormitorios);
+            cmd.Parameters.AddWithValue("@banio", depa.Dpto_Baños);
+            cmd.Parameters.AddWithValue("@disposicion", depa.Dpto_Disposicion);
+            cmd.Parameters.AddWithValue("@precio", depa.Dpto_Precio);
+
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+
+            return dt;
+        }
+
+        public static DataTable UpdateDepartamentoSP(Departamento depa)
+        {
+            SqlConnection conexion = new SqlConnection(ClaseBase.Properties.Settings.Default.agenciaConnectionString);
+
+            SqlCommand cmd = new SqlCommand();
+            cmd.CommandText = "UpdateDepartamento";
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Connection = conexion;
+
+            cmd.Parameters.AddWithValue("@edif_codigo", depa.Edif_Codigo);
+            cmd.Parameters.AddWithValue("@tipoDpto_codigo", depa.Dpto_Tipo);
+            cmd.Parameters.AddWithValue("@numero", depa.Dpto_Numero);
+            cmd.Parameters.AddWithValue("@piso", depa.Dpto_Piso);
+            cmd.Parameters.AddWithValue("@ambiente", depa.Dpto_Ambientes);
+            cmd.Parameters.AddWithValue("@dormitorios", depa.Dpto_Dormitorios);
+            cmd.Parameters.AddWithValue("@baños", depa.Dpto_Baños);
+            cmd.Parameters.AddWithValue("@disposicion", depa.Dpto_Disposicion);
+            cmd.Parameters.AddWithValue("@precio", depa.Dpto_Precio);
+            cmd.Parameters.AddWithValue("@dpto_codigo", depa.Dpto_Codigo);
+
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+
+            return dt;
+        }
+
+        public static DataTable EliminarDepartamentobyIdSP(int departamento)
+        {
+            SqlConnection conexion = new SqlConnection(ClaseBase.Properties.Settings.Default.agenciaConnectionString);
+
+            SqlCommand cmd = new SqlCommand();
+            cmd.CommandText = "EliminarDepartamento";
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Connection = conexion;
+
+            cmd.Parameters.AddWithValue("@dpto_codigo", departamento);
+
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+
+            return dt;
+        }
     }
 }

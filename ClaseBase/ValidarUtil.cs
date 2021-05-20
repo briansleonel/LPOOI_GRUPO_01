@@ -92,6 +92,34 @@ namespace ClaseBase
             }
         }
 
+        //*****Valida textBox vacios****////
+        public static Boolean validarTextBox(Control control)
+        {
+
+            //Variable auxiliar usada para validación de campos vacíos
+            bool bVacio = true;
+            //Buscamos en cada Control de nuestro Formulario.
+            foreach (Control oControls in control.Controls)
+            {
+                //Preguntamos por cada TextBox de los controles del formulario
+                if (oControls is TextBox)
+                {
+                    TextBox textBox = oControls as TextBox;
+                    //Si algún TextBox se encontrase vacío la variable auxiliar se vuelve "true"
+                    if (textBox.Text == string.Empty)
+                    {
+                        bVacio = false;
+                        MessageBox.Show("Campo Requerido");
+                        textBox.Focus();
+                        break;
+                    }
+                }
+            }
+            return bVacio;
+
+        }
+
+       
         
     }
 }

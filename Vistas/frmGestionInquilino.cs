@@ -5,6 +5,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Runtime.InteropServices;
 using System.Windows.Forms;
 
 using ClaseBase;
@@ -23,16 +24,47 @@ namespace Vistas
         {
             cargarInquilinos();
             lblOperador.Text = UserLogin.usuLog_FullName;
+            txtPatternSearch.LostFocus += new EventHandler(this.TextLostFocus);
+            txtPatternSearch.GotFocus += new EventHandler(this.TextGotFocus);
         }
 
+
+        public void TextGotFocus(object sender, EventArgs e)
+        {
+
+            if (txtPatternSearch.Text == "Buscar por Apellido o Nombre")
+            {
+                txtPatternSearch.Text = "";
+                txtPatternSearch.ForeColor = Color.Black;
+            }
+        }
+
+        public void TextLostFocus(object sender, EventArgs e)
+        {
+
+            if (txtPatternSearch.Text == "")
+            {
+                txtPatternSearch.Text = "Buscar por Apellido o Nombre";
+                txtPatternSearch.ForeColor = Color.DarkGray;
+            }
+        }
+
+        private void cargarInquilinosApellido()
+        {
+            dgwInquilinos.DataSource = TrabajarInquilino.listarInquilinosApellidoSP();
+        }
         private void cargarInquilinos()
         {
             dgwInquilinos.DataSource = TrabajarInquilino.listarInquilinos();
+
         }
 
         private void btnSearch_Click(object sender, EventArgs e)
         {
             cargarInquilinos();
+            txtPatternSearch.Text = "Buscar por Apellido o Nombre";
+            txtPatternSearch.ForeColor = Color.DarkGray;
+
         }
 
         private void dgwUsuarios_CurrentCellChanged(object sender, EventArgs e)
@@ -46,7 +78,7 @@ namespace Vistas
                 txtModificarApellido.Text = dgwInquilinos.CurrentRow.Cells["Apellido"].Value.ToString();
                 txtModificarNombre.Text = dgwInquilinos.CurrentRow.Cells["Nombre"].Value.ToString();
                 txtModificarTelefono.Text = dgwInquilinos.CurrentRow.Cells["Telefono"].Value.ToString();
-
+                
 
                 //Panel delete
 
@@ -63,7 +95,7 @@ namespace Vistas
 
         private void btnAddSaveUser_Click(object sender, EventArgs e)
         {
-            if (validarTextBoxAddUser())
+            if (ValidarUtil.validarTextBox(tabNewUser))
             {
                 DialogResult rta = MessageBox.Show("¿Desea agregar el Inquilino?", "", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
                 if (rta == DialogResult.Yes)
@@ -80,7 +112,7 @@ namespace Vistas
 
         private void btnModSave_Click(object sender, EventArgs e)
         {
-            if (validarTextBoxModificarUser())
+            if (ValidarUtil.validarTextBox(tabModificar))
             {
                 DialogResult rta = MessageBox.Show("¿Esta seguro que desea modificar los datos del Inquilino?", "", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
                 if (rta == DialogResult.Yes)
@@ -129,51 +161,6 @@ namespace Vistas
 
         }
 
-        /*
-         * ------------------- VALIDACIONES DE CAMPOS -----------------------
-         */
-
-        private bool validarTextBoxAddUser()
-        {
-            if (txtNuevoApellido.Text == "")
-            {
-                MessageBox.Show("Debe ingresar el APELLIDO del Inquilino", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }
-            else if (txtNuevoNombre.Text == "")
-            {
-                MessageBox.Show("Debe ingresar el NOMBRE del Inquilino", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }
-            else if (txtNuevoTelefono.Text == "")
-            {
-                MessageBox.Show("Debe ingresar el TELEFONO del inquilino", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }
-            else
-            {
-                return true;
-            }
-            return false;
-        }
-
-        private bool validarTextBoxModificarUser()
-        {
-            if (txtModificarApellido.Text == "")
-            {
-                MessageBox.Show("Debe ingresar el APELLIDO del Inquilino", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }
-            else if (txtModificarNombre.Text == "")
-            {
-                MessageBox.Show("Debe ingresar el NOMBRE del Inquilino", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }
-            else if (txtModificarTelefono.Text == "")
-            {
-                MessageBox.Show("Debe ingresar el TELEFONO del inquilino", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }
-            else
-            {
-                return true;
-            }
-            return false;
-        }
 
 
         public void guardarInquilino()
@@ -196,15 +183,6 @@ namespace Vistas
             TrabajarInquilino.update_inquilino(oInquilino);
         }
 
-        private void txtBuscar_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            if (txtPatternSearch.Text != "")
-            {
-                dgwInquilinos.DataSource = TrabajarInquilino.buscarInquilinos(txtPatternSearch.Text);
-                DataGridViewColumn Column = dgwInquilinos.Columns[0];
-
-            }
-        }
 
         /*
          * ---------------- LIMPIEZA DE CAMPOS -----------------------------
@@ -225,39 +203,83 @@ namespace Vistas
         private void btnVolverAtras_Click(object sender, EventArgs e)
         {
             this.Close();
-            FrmPrincipal inicio = new FrmPrincipal();
-            //FrmMain inicio = new FrmMain();
-            inicio.Show();
+
         }
 
-        private void txtNuevoApellido_KeyPress(object sender, KeyPressEventArgs e)
+        private void validarSoloLetras_KeyPress(object sender, KeyPressEventArgs e)
         {
             ValidarUtil.SoloLetras(e);
         }
 
-        private void txtNuevoNombre_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            ValidarUtil.SoloLetras(e);
-        }
+        
 
-        private void txtNuevoTelefono_KeyPress(object sender, KeyPressEventArgs e)
+        private void validarSoloNumeros_KeyPress(object sender, KeyPressEventArgs e)
         {
             ValidarUtil.SoloNumeros(e);
         }
 
-        private void txtModificarApellido_KeyPress(object sender, KeyPressEventArgs e)
+        
+
+        private void chkOrdenarApellido_CheckedChanged(object sender, EventArgs e)
         {
-            ValidarUtil.SoloLetras(e);
+            if (chkOrdenarApellido.Checked)
+            {
+                cargarInquilinosApellido();
+                txtPatternSearch.Text = "Buscar por Apellido o Nombre";
+                txtPatternSearch.ForeColor = Color.DarkGray;
+            }
+
+            else
+            {
+                cargarInquilinos();
+                txtPatternSearch.Text = "Buscar por Apellido o Nombre";
+                txtPatternSearch.ForeColor = Color.DarkGray;
+            }
+
         }
 
-        private void txtModificarNombre_KeyPress(object sender, KeyPressEventArgs e)
+        private void txtPatternSearch_KeyUp(object sender, KeyEventArgs e)
         {
-            ValidarUtil.SoloLetras(e);
+                    
+            dgwInquilinos.DataSource = TrabajarInquilino.buscarInquilinos(txtPatternSearch.Text);
+            DataGridViewColumn Column = dgwInquilinos.Columns[0];
+
         }
 
-        private void txtModificarTelefono_KeyPress(object sender, KeyPressEventArgs e)
+        [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
+        private extern static void ReleaseCapture();
+        [DllImport("user32.DLL", EntryPoint = "SendMessage")]
+        private extern static void SendMessage(System.IntPtr hWnd, int wMsg, int wParam, int lParam);
+
+        private void panel1_MouseDown(object sender, MouseEventArgs e)
         {
-            ValidarUtil.SoloNumeros(e);
+            ReleaseCapture();
+            SendMessage(this.Handle, 0x112, 0xf012, 0);
         }
-    }
+
+        private void pctGestionInquilinoCerrar_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void pctGestionInquilinoMinimizar_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+        }
+
+        private void pctGestionInquilinoRestaurar_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Normal;
+            pctGestionInquilinoRestaurar.Visible = false;
+            pctGestionInquilinoMaximizar.Visible = true;
+        }
+
+        private void pctGestionInquilinoMaximizar_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Maximized;
+            pctGestionInquilinoRestaurar.Visible = true;
+            pctGestionInquilinoMaximizar.Visible = false;
+        }
+
+     }
 }

@@ -43,17 +43,19 @@ namespace ClaseBase
                     UserLogin.usuLog_FullName = reader.GetString(3);
                     UserLogin.rolLog_Codigo = reader.GetInt32(4);
                     UserLogin.rolLog_Descripcion = reader.GetString(6);
-                    
                 }
+                conexion.Close();
                 return true;
             }
             else
+            {
+                conexion.Close();
                 return false;
-            
-            cmd.ExecuteNonQuery();
-            conexion.Close();
-
-            DataTable dt = new DataTable();
+            }
+                //cmd.ExecuteNonQuery();
+                //conexion.Close();
+                //DataTable dt = new DataTable();
+ 
            // da.Fill(dt);
 
             //return dt;

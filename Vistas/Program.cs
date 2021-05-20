@@ -23,6 +23,8 @@ namespace Vistas
             //frmGestionAlquiler a = new frmGestionAlquiler();
             //frmGestionInquilino a = new frmGestionInquilino();
             //frmGestionUsuario a = new frmGestionUsuario();
+            //FrmGestionDepartamento a = new FrmGestionDepartamento();
+            //FrmGestionEdificio a = new FrmGestionEdificio();
             //a.Show();
 
             Application.Run();

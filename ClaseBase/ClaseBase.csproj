@@ -21,6 +21,8 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <DocumentationFile>
+    </DocumentationFile>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -33,6 +35,7 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -44,6 +47,7 @@
     <Compile Include="Alquiler.cs" />
     <Compile Include="Class1.cs" />
     <Compile Include="Departamento.cs" />
+    <Compile Include="Disposicion.cs" />
     <Compile Include="Edificio.cs" />
     <Compile Include="Inquilino.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -53,11 +57,14 @@
       <DependentUpon>Settings.settings</DependentUpon>
     </Compile>
     <Compile Include="Rol.cs" />
+    <Compile Include="Encrypt.cs" />
     <Compile Include="TrabajarAlquiler.cs" />
     <Compile Include="TrabajarDepartamento.cs" />
+    <Compile Include="TrabajarDisposicion.cs" />
     <Compile Include="TrabajarEdificio.cs" />
     <Compile Include="TrabajarInquilino.cs" />
     <Compile Include="TrabajarLogin.cs" />
+    <Compile Include="TrabajarTipoDepartamento.cs" />
     <Compile Include="TrabajarUsuario.cs" />
     <Compile Include="UserLogin.cs" />
     <Compile Include="Usuario.cs" />

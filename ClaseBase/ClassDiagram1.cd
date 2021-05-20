@@ -45,8 +45,15 @@
   <Class Name="ClaseBase.UserLogin">
     <Position X="6" Y="5.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>QCAAAQAgAAAIAAAAAAAAEAABADBAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAgAAAAAAAAAAAAAAABADBAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>UserLogin.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ClaseBase.Disposicion">
+    <Position X="7.5" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAIAIAAAAAAAAAAAAAAAAAAAAAAAAgAgA=</HashCode>
+      <FileName>Disposicion.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Font Name="Segoe UI" Size="9" />

@@ -72,6 +72,28 @@ namespace ClaseBase
 
             // Llena los datos de la consulta en el DataTable
             DataTable dt = new DataTable();
+            
+            da.Fill(dt);
+            
+            return dt;
+        }
+
+
+        public static DataTable listarInquilinosApellidoSP()
+        {
+            SqlConnection cnn = new SqlConnection(ClaseBase.Properties.Settings.Default.agenciaConnectionString);
+
+            SqlCommand cmd = new SqlCommand();
+            cmd.CommandText = "ListarInquilinosApellido";
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Connection = cnn;
+
+
+            // Ejecuta la consulta
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+
+            // Llena los datos de la consulta en el DataTable
+            DataTable dt = new DataTable();
             da.Fill(dt);
 
             return dt;
@@ -85,13 +107,10 @@ namespace ClaseBase
             cmd = cnn.CreateCommand();
             cmd.CommandText = "SELECT ";
             cmd.CommandText += " inq_codigo as 'ID', inq_apellido as 'Apellido', inq_nombre as 'Nombre', inq_Telefono as'Telefono'"; //, inq_nombre as 'Nombre', ";
-            //cmd.CommandText += " inq_telefono as 'Telefono', ";
             cmd.CommandText += " FROM Inquilino as I";
 
             cmd.CommandType = CommandType.Text;
             cmd.Connection = cnn;
-
-
 
             // Ejecuta la consulta
             SqlDataAdapter da = new SqlDataAdapter(cmd);
